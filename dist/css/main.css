@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Poppins:wght@200;400;500;700;900&display=swap");
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+:root {
+  --purple-bg: #845ec2;
+  --brown-bg: #4b4453;
+  --pinky-gray: #b0a8B9;
+  --orange-salmon: #ED6A6A;
+  --orange-light: #ff8066;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  background-color: var(--orange-salmon);
+  padding: 2rem 2.5rem;
+}
+
+header a {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  font-size: 2.5rem;
+}
+
+header .mobile-nav i {
+  font-size: 2.5rem;
+  color: white;
+}
+
+main .intro-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--brown-bg);
+}
+
+main .intro-section h1 {
+  margin: 0;
+}
+
+main .intro-section h2 {
+  margin: 0;
+  text-align: center;
+}
+/*# sourceMappingURL=main.css.map */

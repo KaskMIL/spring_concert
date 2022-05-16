@@ -1,0 +1,25 @@
+{
+  "name": "spring_concert",
+  "version": "1.0.0",
+  "description": "![](https://img.shields.io/badge/Microverse-blueviolet)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KaskMIL/spring_concert.git"
+  },
+  "author": "Tom Milanesi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KaskMIL/spring_concert/issues"
+  },
+  "homepage": "https://github.com/KaskMIL/spring_concert#readme",
+  "devDependencies": {
+    "sass": "^1.51.0"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.7"
+  }
+}
