@@ -26,7 +26,7 @@ h1,h2,h3,h4,p {
   --brown-bg: #595959;
   --pinky-gray: #a5dcc0;
   --orange-salmon: #ED6A6A;
-  --orange-title: rgba(245,61,13,1);
+  --orange-title: #ec5242;
 }
 
 // Apply to body
@@ -70,7 +70,7 @@ header {
     position: fixed;
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../../images/concert-people.jpeg);
+    background-image: linear-gradient(rgba(211, 211, 211, 0.9), rgba(211, 211, 211, 0.9)), url(../../images/concert-people.jpeg);
     background-repeat: no-repeat, no-repeat;
     background-size: cover, cover;
     top: 0;
@@ -81,7 +81,7 @@ header {
     i {
       align-self: flex-end;
       font-size: 6rem;
-      color: rgba(245,61,13,1);
+      color: var(--orange-title);
       margin: 2rem 2rem 0 0;
     }
 
@@ -94,11 +94,11 @@ header {
       li {
         text-align: center;
         margin-bottom: 6rem;
-        border-bottom: 0.2rem rgba(245,61,13,1) solid;
+        border-bottom: 0.2rem var(--orange-title) solid;
 
         a {
           text-decoration: none;
-          color: rgba(245,61,13,1);
+          color: var(--orange-title);
         }
       }
     }
@@ -113,12 +113,13 @@ header {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 0 5rem;
 
       .logo {
         display: block;
         font-size: 3rem;
         font-weight: 800;
-        color: rgba(245,61,13,1);
+        color: var(--orange-title);
         line-height: 3rem;
       }
 
@@ -136,7 +137,7 @@ header {
       }
 
       a:hover {
-        color: rgba(245,61,13,1);
+        color: var(--orange-title);
       }
     }
   }
@@ -149,14 +150,14 @@ main {
     flex-direction: column;
     height: 100vh;
     justify-content: center;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../../images/concert-people.jpeg);
+    background-image: linear-gradient(rgba(211, 211, 211, 0.9), rgba(211, 211, 211, 0.9)), url(../../images/concert-people.jpeg);
     background-repeat: no-repeat, no-repeat;
     background-size: cover, cover;
 
     h1 {
       font-size: 6rem;
       font-weight: 800;
-      color: rgba(245,61,13,1);
+      color: var(--orange-title);
       line-height: 6rem;
       order: 1;
       margin-bottom: 2rem;
@@ -197,6 +198,22 @@ main {
       color: var(--brown-bg);
       margin-left: 2rem;
     }
+
+    @media screen and (min-width: 998px) {
+      padding: 0 25rem;
+
+      .text-container {
+        font-size: 2rem;
+      }
+
+      h3 {
+        font-size: 4rem;
+      }
+
+      h4 {
+        font-size: 2rem;
+      }
+    }
   }
 
   // Spaces Section
@@ -204,7 +221,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 4rem 2rem;
+    padding: 6rem 2rem;
     background-color: #000000;
     // opacity: 0.8;
     background: radial-gradient(circle, transparent 20%, #000000 20%, #000000 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #000000 20%, #000000 80%, transparent 80%, transparent) 10px 10px, linear-gradient(#262968 0.8px, transparent 0.8px) 0 -0.4px, linear-gradient(90deg, #262968 0.8px, #000000 0.8px) -0.4px 0;
@@ -220,7 +237,7 @@ main {
     .horizontal-bar {
       width: 5rem;
       height: 0.2rem;
-      background-color: #F54E38;
+      background-color: var(--orange-title);
       margin-bottom: 4rem;
     }
 
@@ -228,7 +245,7 @@ main {
       font-size: 3rem;
       text-decoration: none;
       color: white;
-      background-color: #F54E38;
+      background-color: var(--orange-title);
       padding: 3rem;
       margin-top: 3rem;
     }
@@ -248,7 +265,7 @@ main {
       }
 
       h3 {
-        color: #F54E38;
+        color: var(--orange-title);
         font-size: 3rem;
         justify-self: start;
         margin-left: 0.5rem;
@@ -256,6 +273,34 @@ main {
 
       p {
         font-size: 2rem;
+      }
+    }
+
+    @media screen and (min-width: 998px) {
+
+      .desktop-container {
+        display: flex;
+
+        .card-container {
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: 0.2fr 0.6fr 0.8fr;
+          margin-right: 0.5rem;
+          justify-items: center;
+
+          i {
+            font-size: 7rem;
+          }
+
+          h3 {
+            font-size: 2.5rem;
+            justify-self: center;
+          }
+
+          p {
+            text-align: center;
+          }
+        }
       }
     }
   }
@@ -277,7 +322,7 @@ main {
     .horizontal-bar {
       width: 5rem;
       height: 0.2rem;
-      background-color: #F54E38;
+      background-color: var(--orange-title);
       margin-bottom: 4rem;
     }
 
@@ -308,7 +353,7 @@ main {
 
         h4 {
           font-weight: 400;
-          color: #F54E38;
+          color: var(--orange-title);
           font-style: italic;
           line-height: 3rem;
           font-size: 2rem;

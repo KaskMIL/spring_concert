@@ -27,7 +27,7 @@ h1, h2, h3, h4, p {
   --brown-bg: #595959;
   --pinky-gray: #a5dcc0;
   --orange-salmon: #ED6A6A;
-  --orange-title: rgba(245,61,13,1);
+  --orange-title: #ec5242;
 }
 
 .disable-scroll {
@@ -70,8 +70,8 @@ header .mobile-menu-on {
   position: fixed;
   width: 100%;
   height: 100vh;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0.7))), url(../../images/concert-people.jpeg);
-  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../../images/concert-people.jpeg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(211, 211, 211, 0.9)), to(rgba(211, 211, 211, 0.9))), url(../../images/concert-people.jpeg);
+  background-image: linear-gradient(rgba(211, 211, 211, 0.9), rgba(211, 211, 211, 0.9)), url(../../images/concert-people.jpeg);
   background-repeat: no-repeat, no-repeat;
   background-size: cover, cover;
   top: 0;
@@ -89,7 +89,7 @@ header .mobile-menu-on i {
   -ms-flex-item-align: end;
       align-self: flex-end;
   font-size: 6rem;
-  color: #f53d0d;
+  color: var(--orange-title);
   margin: 2rem 2rem 0 0;
 }
 
@@ -105,12 +105,12 @@ header .mobile-menu-on ul {
 header .mobile-menu-on ul li {
   text-align: center;
   margin-bottom: 6rem;
-  border-bottom: 0.2rem #f53d0d solid;
+  border-bottom: 0.2rem var(--orange-title) solid;
 }
 
 header .mobile-menu-on ul li a {
   text-decoration: none;
-  color: #f53d0d;
+  color: var(--orange-title);
 }
 
 @media screen and (min-width: 768px) {
@@ -124,6 +124,7 @@ header .mobile-menu-on ul li a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding: 0 5rem;
   }
   header .mobile-nav #menu-open-btn {
     display: none;
@@ -132,7 +133,7 @@ header .mobile-menu-on ul li a {
     display: block;
     font-size: 3rem;
     font-weight: 800;
-    color: #f53d0d;
+    color: var(--orange-title);
     line-height: 3rem;
   }
   header .mobile-nav ul {
@@ -149,7 +150,7 @@ header .mobile-menu-on ul li a {
     margin-left: 5rem;
   }
   header .mobile-nav a:hover {
-    color: #f53d0d;
+    color: var(--orange-title);
   }
 }
 
@@ -165,8 +166,8 @@ main .intro-section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0.7))), url(../../images/concert-people.jpeg);
-  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../../images/concert-people.jpeg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(211, 211, 211, 0.9)), to(rgba(211, 211, 211, 0.9))), url(../../images/concert-people.jpeg);
+  background-image: linear-gradient(rgba(211, 211, 211, 0.9), rgba(211, 211, 211, 0.9)), url(../../images/concert-people.jpeg);
   background-repeat: no-repeat, no-repeat;
   background-size: cover, cover;
 }
@@ -174,7 +175,7 @@ main .intro-section {
 main .intro-section h1 {
   font-size: 6rem;
   font-weight: 800;
-  color: #f53d0d;
+  color: var(--orange-title);
   line-height: 6rem;
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
@@ -226,6 +227,21 @@ main .intro-section h4 {
   margin-left: 2rem;
 }
 
+@media screen and (min-width: 998px) {
+  main .intro-section {
+    padding: 0 25rem;
+  }
+  main .intro-section .text-container {
+    font-size: 2rem;
+  }
+  main .intro-section h3 {
+    font-size: 4rem;
+  }
+  main .intro-section h4 {
+    font-size: 2rem;
+  }
+}
+
 main .spaces-section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -237,7 +253,7 @@ main .spaces-section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 4rem 2rem;
+  padding: 6rem 2rem;
   background-color: #000000;
   background: radial-gradient(circle, transparent 20%, #000000 20%, #000000 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #000000 20%, #000000 80%, transparent 80%, transparent) 10px 10px, linear-gradient(#262968 0.8px, transparent 0.8px) 0 -0.4px, linear-gradient(90deg, #262968 0.8px, #000000 0.8px) -0.4px 0;
   background-size: 20px 20px, 20px 20px, 10px 10px, 10px 10px;
@@ -253,7 +269,7 @@ main .spaces-section h2 {
 main .spaces-section .horizontal-bar {
   width: 5rem;
   height: 0.2rem;
-  background-color: #F54E38;
+  background-color: var(--orange-title);
   margin-bottom: 4rem;
 }
 
@@ -261,7 +277,7 @@ main .spaces-section a {
   font-size: 3rem;
   text-decoration: none;
   color: white;
-  background-color: #F54E38;
+  background-color: var(--orange-title);
   padding: 3rem;
   margin-top: 3rem;
 }
@@ -286,7 +302,7 @@ main .spaces-section .card-container i {
 }
 
 main .spaces-section .card-container h3 {
-  color: #F54E38;
+  color: var(--orange-title);
   font-size: 3rem;
   -ms-grid-column-align: start;
       justify-self: start;
@@ -295,6 +311,35 @@ main .spaces-section .card-container h3 {
 
 main .spaces-section .card-container p {
   font-size: 2rem;
+}
+
+@media screen and (min-width: 998px) {
+  main .spaces-section .desktop-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  main .spaces-section .desktop-container .card-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 0.2fr 0.6fr 0.8fr;
+        grid-template-rows: 0.2fr 0.6fr 0.8fr;
+    margin-right: 0.5rem;
+    justify-items: center;
+  }
+  main .spaces-section .desktop-container .card-container i {
+    font-size: 7rem;
+  }
+  main .spaces-section .desktop-container .card-container h3 {
+    font-size: 2.5rem;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  main .spaces-section .desktop-container .card-container p {
+    text-align: center;
+  }
 }
 
 main .presented-section {
@@ -321,7 +366,7 @@ main .presented-section h2 {
 main .presented-section .horizontal-bar {
   width: 5rem;
   height: 0.2rem;
-  background-color: #F54E38;
+  background-color: var(--orange-title);
   margin-bottom: 4rem;
 }
 
@@ -363,7 +408,7 @@ main .presented-section .band-container .grid-2 h3 {
 
 main .presented-section .band-container .grid-2 h4 {
   font-weight: 400;
-  color: #F54E38;
+  color: var(--orange-title);
   font-style: italic;
   line-height: 3rem;
   font-size: 2rem;
