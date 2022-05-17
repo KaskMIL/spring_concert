@@ -114,7 +114,7 @@ main {
     h2 {
       color: white;
       font-weight: 400;
-      font-size: 2.5rem;
+      font-size: 5rem;
       margin-bottom: 0.5rem;
     }
 
@@ -126,6 +126,7 @@ main {
     }
 
     a {
+      font-size: 3rem;
       text-decoration: none;
       color: white;
       background-color: #F54E38;
@@ -144,18 +145,18 @@ main {
       margin-bottom: 1rem;
 
       i {
-        font-size: 5rem;
+        font-size: 9rem;
       }
 
       h3 {
         color: #F54E38;
-        font-size: 1.7rem;
+        font-size: 3rem;
         justify-self: start;
         margin-left: 0.5rem;
       }
 
       p {
-        font-size: 1.3rem;
+        font-size: 2rem;
       }
     }
   }
@@ -167,7 +168,7 @@ main {
     align-items: center;
 
     h2 {
-      font-size: 2.5rem;
+      font-size: 5rem;
       font-weight: 400;
       margin-top: 4rem;
       margin-bottom: 0.5rem;
@@ -202,27 +203,29 @@ main {
 
         h3 {
           font-weight: 600;
-          font-size: 1.5;
+          font-size: 3rem;
         }
 
         h4 {
           font-weight: 400;
           color: #F54E38;
           font-style: italic;
-          line-height: 1.8rem;
-          font-size: 1.3rem;
+          line-height: 3rem;
+          font-size: 2rem;
+          margin-bottom: 1rem;
         }
 
         .card-bar {
           width: 3rem;
           height: 0.2rem;
           background-color: grey;
+          margin-bottom: 1rem;
         }
 
         p {
           font-weight: 300;
-          font-size: 1.2rem;
-          line-height: 1.5rem;
+          font-size: 1.8rem;
+          line-height: 2.5rem;
         }
       }
     }
