@@ -14,19 +14,27 @@
 <body>
   <header>
     <nav class="mobile-nav" id="menu-nav-ham">
-      <i class="bi bi-list" id="menu-open-btn"></i>
+      <a href="#" id="menu-open-btn">
+        <i class="bi bi-list"></i>
+      </a>
+      <a href="#" class="logo">SUNSHINE ROCK<br>MUSIC FEST</a>
+      <ul>
+        <li><a href="#intro">Intro</a></li>
+        <li><a href="#spaces">Spaces</a></li>
+        <li><a href="#bands">Bands</a></li>
+      </ul>
     </nav>
     <nav class="mobile-menu-off" id="menu-nav-open">
       <i class="bi bi-x-lg" id="menu-close-btn"></i>
       <ul>
-        <li><a href="#">Intro</a></li>
-        <li><a href="#">Spaces</a></li>
-        <li><a href="#">Bands</a></li>
+        <li><a id="intro-btn" href="#intro">Intro</a></li>
+        <li><a id="spaces-btn" href="#spaces">Spaces</a></li>
+        <li><a id="bands-btn" href="#bands">Bands</a></li>
       </ul>
     </nav>
   </header>
   <main>
-    <section class="intro-section">
+    <section id="intro" class="intro-section">
       <h1>SUNSHINE ROCK<br>MUSIC FEST<br>2022</h1>
       <h2>"Hello! Sunny world"</h2>
       <div class="text-container">
@@ -37,7 +45,7 @@
       <h4>@San Isidro's Racecourse, Buenos Aires, Arg</h4>
     </section>
 
-    <section class="spaces-section">
+    <section id="spaces" class="spaces-section">
       <h2>Spaces</h2>
       <div class="horizontal-bar"></div>
       <article class="card-container">
@@ -68,7 +76,7 @@
       <a href="#">Join Sunshine Rock MF 2022</a>
     </section>
 
-    <section class="presented-section">
+    <section id="bands" class="presented-section">
       <h2>Bands Presented</h2>
       <div class="horizontal-bar"></div>
       <article class="band-container">
@@ -124,7 +132,7 @@
           <img src="./images/radio-head.jpeg" alt="Arctic Monkeys">
         </div>
         <div class="grid-2">
-          <h3>Jack Johnson</h3>
+          <h3>RadioHead</h3>
           <h4>Some giberish really long so I can test the text</h4>
           <div class="card-bar"></div>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo cum soluta nam voluptas quo suscipit minus

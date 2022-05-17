@@ -40,13 +40,26 @@ header .mobile-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
   position: fixed;
   top: 0;
   overflow: hidden;
   width: 100%;
   padding: 0.5rem 2rem;
   font-size: 4rem;
+}
+
+header .mobile-nav .logo {
+  display: none;
+}
+
+header .mobile-nav ul {
+  display: none;
+}
+
+header .mobile-nav a {
+  text-decoration: none;
+  color: black;
 }
 
 header .mobile-menu-off {
@@ -98,6 +111,46 @@ header .mobile-menu-on ul li {
 header .mobile-menu-on ul li a {
   text-decoration: none;
   color: #f53d0d;
+}
+
+@media screen and (min-width: 768px) {
+  header .mobile-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .mobile-nav #menu-open-btn {
+    display: none;
+  }
+  header .mobile-nav .logo {
+    display: block;
+    font-size: 3rem;
+    font-weight: 800;
+    color: #f53d0d;
+    line-height: 3rem;
+  }
+  header .mobile-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header .mobile-nav ul li {
+    font-weight: 300;
+    font-size: 2rem;
+    margin-left: 5rem;
+  }
+  header .mobile-nav a:hover {
+    color: #f53d0d;
+  }
 }
 
 main .intro-section {
@@ -186,7 +239,6 @@ main .spaces-section {
           align-items: center;
   padding: 4rem 2rem;
   background-color: #000000;
-  opacity: 0.8;
   background: radial-gradient(circle, transparent 20%, #000000 20%, #000000 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #000000 20%, #000000 80%, transparent 80%, transparent) 10px 10px, linear-gradient(#262968 0.8px, transparent 0.8px) 0 -0.4px, linear-gradient(90deg, #262968 0.8px, #000000 0.8px) -0.4px 0;
   background-size: 20px 20px, 20px 20px, 10px 10px, 10px 10px;
 }
@@ -224,7 +276,7 @@ main .spaces-section .card-container {
       -ms-flex-align: center;
           align-items: center;
   justify-items: center;
-  background-color: rgba(45, 45, 45, 0.5);
+  background-color: rgba(77, 77, 77, 0.5);
   padding: 1rem 1rem;
   margin-bottom: 1rem;
 }

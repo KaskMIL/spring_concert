@@ -40,13 +40,26 @@ header {
 
   .mobile-nav {
     display: flex;
-    background-color: rgba(255,255,255,0.5);
+    background-color: rgba(255,255,255,0.8);
     position: fixed;
     top: 0;
     overflow: hidden;
     width: 100%;
     padding: 0.5rem 2rem;
     font-size: 4rem;
+
+    .logo {
+      display: none;
+    }
+
+    ul {
+      display: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
   }
 
   .mobile-menu-off {
@@ -87,6 +100,43 @@ header {
           text-decoration: none;
           color: rgba(245,61,13,1);
         }
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .mobile-nav {
+      #menu-open-btn {
+        display: none;
+      }
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .logo {
+        display: block;
+        font-size: 3rem;
+        font-weight: 800;
+        color: rgba(245,61,13,1);
+        line-height: 3rem;
+      }
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+
+        li {
+          font-weight: 300;
+          font-size: 2rem;
+          margin-left: 5rem;
+        }
+      }
+
+      a:hover {
+        color: rgba(245,61,13,1);
       }
     }
   }
@@ -156,7 +206,7 @@ main {
     align-items: center;
     padding: 4rem 2rem;
     background-color: #000000;
-    opacity: 0.8;
+    // opacity: 0.8;
     background: radial-gradient(circle, transparent 20%, #000000 20%, #000000 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #000000 20%, #000000 80%, transparent 80%, transparent) 10px 10px, linear-gradient(#262968 0.8px, transparent 0.8px) 0 -0.4px, linear-gradient(90deg, #262968 0.8px, #000000 0.8px) -0.4px 0;
     background-size: 20px 20px, 20px 20px, 10px 10px, 10px 10px;
 
@@ -189,7 +239,7 @@ main {
       color: white;
       align-items: center;
       justify-items: center;
-      background-color: rgba(45, 45, 45, 0.5);
+      background-color: rgba(77, 77, 77, 0.5);
       padding: 1rem 1rem;
       margin-bottom: 1rem;
 
