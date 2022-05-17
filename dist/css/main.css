@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Poppins:wght@200;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Poppins:wght@200;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Koulen&family=Pacifico&family=Permanent+Marker&family=Satisfy&display=swap");
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -18,39 +19,131 @@ body {
 :root {
   --purple-bg: #845ec2;
   --brown-bg: #4b4453;
-  --pinky-gray: #b0a8B9;
+  --pinky-gray: #a5dcc0;
   --orange-salmon: #ED6A6A;
   --orange-light: #ff8066;
 }
 
 header {
+  padding: 1rem 1rem;
+  font-size: 3rem;
+  -webkit-box-shadow: 0px 0px 21px 4px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 21px 4px rgba(0, 0, 0, 0.75);
+}
+
+header .mobile-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  font-family: 'Pacifico', cursive;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
-  background-color: var(--orange-salmon);
-  padding: 2rem 2.5rem;
+  position: relative;
 }
 
-header a {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-  color: white;
+header .mobile-nav a {
   text-decoration: none;
-  font-size: 2.5rem;
+  color: black;
+}
+
+header .mobile-nav a span {
+  color: var(--orange-salmon);
 }
 
 header .mobile-nav i {
-  font-size: 2.5rem;
-  color: white;
+  position: absolute;
+  left: 0;
 }
 
 main .intro-section {
+  position: relative;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+main .intro-section .intro-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0.7))), url(../../images/concert-people.jpeg);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../../images/concert-people.jpeg);
+  -webkit-filter: blur(3px) grayscale(100%);
+          filter: blur(3px) grayscale(100%);
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
+  z-index: -1;
+}
+
+main .intro-section .intro-content {
+  padding: 1rem 2rem;
+}
+
+main .intro-section .intro-content p, main .intro-section .intro-content h1, main .intro-section .intro-content h2 {
+  margin: 0;
+  padding: 0;
+  color: var(--orange-light);
+}
+
+main .intro-section .intro-content h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 3.5rem;
+  line-height: 4rem;
+  text-align: center;
+  color: var(--orange-salmon);
+  margin-bottom: 2rem;
+}
+
+main .intro-section .intro-content h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+main .intro-section .intro-content p {
+  color: var(--orange-light);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+main .intro-section .intro-content .description-container {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+}
+
+main .intro-section .intro-content .description-container p {
+  color: grey;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 1.8rem;
+}
+
+main .program-section {
+  background-color: #06073d;
+  opacity: 0.9;
+  background-image: linear-gradient(to right, #000000, #000000 10.5px, #06073d 10.5px, #06073d);
+  background-size: 21px 100%;
+  padding: 5rem 2rem;
+  color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -61,15 +154,56 @@ main .intro-section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: var(--brown-bg);
 }
 
-main .intro-section h1 {
+main .program-section h2, main .program-section h3, main .program-section p {
   margin: 0;
+  padding: 0;
 }
 
-main .intro-section h2 {
-  margin: 0;
+main .program-section h2 {
+  font-family: 'Pacifico', cursive;
+  font-size: 3.5rem;
+  line-height: 4rem;
+  margin-bottom: 4rem;
+}
+
+main .program-section article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: rgba(40, 40, 40, 0.756);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 0;
+}
+
+main .program-section article i {
+  -ms-flex-preferred-size: 10%;
+      flex-basis: 10%;
+  font-size: 3rem;
   text-align: center;
+}
+
+main .program-section article h3 {
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.7rem;
+  margin-right: 2rem;
+}
+
+main .program-section article p {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.7rem;
+  font-weight: 200;
 }
 /*# sourceMappingURL=main.css.map */

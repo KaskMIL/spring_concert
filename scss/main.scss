@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Poppins:wght@200;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Poppins:wght@200;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Pacifico&family=Permanent+Marker&family=Satisfy&display=swap');
 
 html {
   box-sizing: border-box;
@@ -18,47 +19,161 @@ body {
 :root {
   --purple-bg: #845ec2;
   --brown-bg: #4b4453;
-  --pinky-gray: #b0a8B9;
+  --pinky-gray: #a5dcc0;
   --orange-salmon: #ED6A6A;
   --orange-light: #ff8066;
 }
 
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  background-color: var(--orange-salmon);
-  padding: 2rem 2.5rem;
-
-  a {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    color: white;
-    text-decoration: none;
-    font-size: 2.5rem;
-  }
+  padding: 1rem 1rem;
+  font-size: 3rem;
+  box-shadow: 0px 0px 21px 4px rgba(0,0,0,0.75);
 
   .mobile-nav {
+    display: flex;
+    font-family: 'Pacifico', cursive;
+    justify-content: center;
+    align-items: baseline;
+    position: relative;
+
+    a {
+      text-decoration: none;
+      color: black;
+
+      span {
+        color: var(--orange-salmon);
+      }
+    }
+
     i {
-      font-size: 2.5rem;
-      color: white;
+      position: absolute;
+      left: 0;
     }
   }
 }
 
 main {
   .intro-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
+    .intro-bg{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)) ,url(../../images/concert-people.jpeg);
+      filter: blur(3px) grayscale(100%);
+      background-repeat: no-repeat, no-repeat;
+      background-size: cover, cover;
+      z-index: -1;
+    }
+
+    .intro-content {
+      padding: 1rem 2rem;
+
+      p,h1,h2 {
+        margin: 0;
+        padding: 0;
+        color: var(--orange-light);
+      }
+
+      h1 {
+        font-family: 'Pacifico', cursive;
+        font-size: 3.5rem;
+        line-height: 4rem;
+        text-align: center;
+        color: var(--orange-salmon);
+        margin-bottom: 2rem;
+      }
+      
+      h2 {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 300;
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+      }
+
+      p {
+        color: var(--orange-light);
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        font-size: 1.5rem;
+      }
+      
+      .description-container {
+        background-color: white;
+        padding: 1rem;
+        border-radius: 5px;
+        margin-bottom: 2rem;
+        
+        p {
+          color: grey;
+          font-family: 'Poppins', sans-serif;
+          font-weight: 400;
+          font-size: 1.8rem;
+          line-height: 1.8rem;
+        }
+      }
+    }
+  }
+
+  .program-section {
+    background-color: #06073d;
+    opacity: 0.9;
+    background-image: linear-gradient(to right, #000000, #000000 10.5px, #06073d 10.5px, #06073d );
+    background-size: 21px 100%;
+    padding: 5rem 2rem;
+    color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--brown-bg);
-
-    h1 {
+    
+    h2,h3,p {
       margin: 0;
+      padding: 0;
     }
+
     h2 {
-      margin: 0;
-      text-align: center;
+      font-family: 'Pacifico', cursive;
+      font-size: 3.5rem;
+      line-height: 4rem;
+      margin-bottom: 4rem;
+    }
+
+    article {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      // width: 40%;  para desktop
+      background-color: rgba(40, 40, 40, 0.756);
+      padding: 1rem;
+      margin-bottom: 1rem;
+      margin-left: 0;
+
+      i {
+        flex-basis: 10%;
+        font-size: 3rem;
+        text-align: center;
+      }
+
+      h3 {
+        flex-basis: 25%;
+        font-family: 'Poppins', sans-serif;
+        line-height: 1.7rem;
+        margin-right: 2rem;
+      }
+
+      p {
+        flex-basis: 50%;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.3rem;
+        line-height: 1.7rem;
+        font-weight: 200;
+      }
     }
   }
 }
