@@ -30,20 +30,74 @@ h1, h2, h3, h4, p {
   --orange-title: rgba(245,61,13,1);
 }
 
-header {
-  background-color: rgba(255, 255, 255, 0.5);
-  position: fixed;
-  top: 0;
+.disable-scroll {
+  margin: 0;
+  height: 100%;
   overflow: hidden;
-  width: 100%;
 }
 
 header .mobile-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
   padding: 0.5rem 2rem;
   font-size: 4rem;
+}
+
+header .mobile-menu-off {
+  display: none;
+}
+
+header .mobile-menu-on {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0.7))), url(../../images/concert-people.jpeg);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../../images/concert-people.jpeg);
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+header .mobile-menu-on i {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  font-size: 6rem;
+  color: #f53d0d;
+  margin: 2rem 2rem 0 0;
+}
+
+header .mobile-menu-on ul {
+  list-style-type: none;
+  font-size: 5rem;
+  font-weight: 800;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+header .mobile-menu-on ul li {
+  text-align: center;
+  margin-bottom: 6rem;
+  border-bottom: 0.2rem #f53d0d solid;
+}
+
+header .mobile-menu-on ul li a {
+  text-decoration: none;
+  color: #f53d0d;
 }
 
 main .intro-section {
@@ -202,6 +256,7 @@ main .presented-section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 3rem 0;
 }
 
 main .presented-section h2 {
