@@ -12,167 +12,145 @@ html {
 body {
   margin: 0;
   font-size: 1.6rem;
+  
+  font-family: 'Poppins', sans-serif;
+   background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../../images/concert-people.jpeg);
+  // filter: blur(3px) grayscale(100%);
+   background-repeat: no-repeat, no-repeat;
+   background-size: cover, cover;
 }
 
+h1,h2,h3,h4,p {
+  margin: 0;
+  padding: 0;
+}
 
 // Colors
 :root {
   --purple-bg: #845ec2;
-  --brown-bg: #4b4453;
+  --brown-bg: #595959;
   --pinky-gray: #a5dcc0;
   --orange-salmon: #ED6A6A;
-  --orange-light: #ff8066;
+  --orange-title: rgba(245,61,13,1);
 }
 
 header {
-  padding: 1rem 1rem;
-  font-size: 3rem;
-  box-shadow: 0px 0px 21px 4px rgba(0,0,0,0.75);
+  background-color: rgba(255,255,255,0.8);
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
 
   .mobile-nav {
     display: flex;
-    font-family: 'Pacifico', cursive;
-    justify-content: center;
-    align-items: baseline;
-    position: relative;
-
-    a {
-      text-decoration: none;
-      color: black;
-
-      span {
-        color: var(--orange-salmon);
-      }
-    }
-
-    i {
-      position: absolute;
-      left: 0;
-    }
+    padding: 1rem 2rem;
+    font-size: 4rem;
   }
 }
 
 main {
+  margin-top: 6rem;
+
   .intro-section {
-    position: relative;
+    display: flex;
+    flex-direction: column;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-content: center;
+    margin: 1rem 1rem 0 1rem;
 
-    .intro-bg{
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-image: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)) ,url(../../images/concert-people.jpeg);
-      filter: blur(3px) grayscale(100%);
-      background-repeat: no-repeat, no-repeat;
-      background-size: cover, cover;
-      z-index: -1;
-    }
-
-    .intro-content {
-      padding: 1rem 2rem;
-
-      p,h1,h2 {
-        margin: 0;
-        padding: 0;
-        color: var(--orange-light);
-      }
-
-      h1 {
-        font-family: 'Pacifico', cursive;
-        font-size: 3.5rem;
-        line-height: 4rem;
-        text-align: center;
-        color: var(--orange-salmon);
-        margin-bottom: 2rem;
-      }
-      
-      h2 {
-        font-family: 'Poppins', sans-serif;
-        font-weight: 300;
-        font-size: 1.8rem;
-        margin-bottom: 2rem;
-      }
-
-      p {
-        color: var(--orange-light);
-        font-family: 'Poppins', sans-serif;
-        font-weight: 700;
-        font-size: 1.5rem;
-      }
-      
-      .description-container {
-        background-color: white;
-        padding: 1rem;
-        border-radius: 5px;
-        margin-bottom: 2rem;
-        
-        p {
-          color: grey;
-          font-family: 'Poppins', sans-serif;
-          font-weight: 400;
-          font-size: 1.8rem;
-          line-height: 1.8rem;
-        }
-      }
-    }
-  }
-
-  .program-section {
-    background-color: #06073d;
-    opacity: 0.9;
-    background-image: linear-gradient(to right, #000000, #000000 10.5px, #06073d 10.5px, #06073d );
-    background-size: 21px 100%;
-    padding: 5rem 2rem;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-    h2,h3,p {
-      margin: 0;
-      padding: 0;
+    h1 {
+      font-size: 3rem;
+      font-weight: 900;
+      color: rgba(245,61,13,1);
+      line-height: 3.5rem;
+      order: 1;
+      margin-bottom: 2rem;
     }
 
     h2 {
-      font-family: 'Pacifico', cursive;
-      font-size: 3.5rem;
-      line-height: 4rem;
+      order: 0;
+      font-weight: 200;
+      color: var(--orange-title);
+    }
+
+    .text-container {
+      order: 2;
+      background-color: white;
+      padding: 1.8rem;
+      color: var(--brown-bg);
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+    }
+
+    h3 {
+      order: 3;
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: var(--brown-bg);
+    }
+
+    h4 {
+      order: 4;
+      font-weight: 300;
+      color: var(--brown-bg);
+    }
+  }
+
+  // Spaces Section
+  .spaces {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 2rem;
+    background-color: #000000;
+    opacity: 0.8;
+    background: radial-gradient(circle, transparent 20%, #000000 20%, #000000 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #000000 20%, #000000 80%, transparent 80%, transparent) 10px 10px, linear-gradient(#262968 0.8px, transparent 0.8px) 0 -0.4px, linear-gradient(90deg, #262968 0.8px, #000000 0.8px) -0.4px 0;
+    background-size: 20px 20px, 20px 20px, 10px 10px, 10px 10px;
+
+    h2 {
+      color: white;
+      font-weight: 400;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .horizontal-bar {
+      width: 5rem;
+      height: 0.2rem;
+      background-color: #F54E38;
       margin-bottom: 4rem;
     }
 
-    article {
-      display: flex;
+    a {
+      text-decoration: none;
+      color: white;
+      background-color: #F54E38;
+      padding: 3rem;
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: 0.3fr 0.6fr 0.8fr;
+      color: white;
       align-items: center;
-      justify-content: space-around;
-      // width: 40%;  para desktop
-      background-color: rgba(40, 40, 40, 0.756);
-      padding: 1rem;
+      justify-items: center;
+      background-color: rgba(45, 45, 45, 0.5);
+      padding: 1rem 1rem;
       margin-bottom: 1rem;
-      margin-left: 0;
 
       i {
-        flex-basis: 10%;
-        font-size: 3rem;
-        text-align: center;
+        font-size: 5rem;
       }
 
       h3 {
-        flex-basis: 25%;
-        font-family: 'Poppins', sans-serif;
-        line-height: 1.7rem;
-        margin-right: 2rem;
+        color: #F54E38;
+        font-size: 1.7rem;
+        justify-self: start;
+        margin-left: 0.5rem;
       }
 
       p {
-        flex-basis: 50%;
-        font-family: 'Poppins', sans-serif;
         font-size: 1.3rem;
-        line-height: 1.7rem;
-        font-weight: 200;
       }
     }
   }

@@ -14,54 +14,47 @@ html {
 body {
   margin: 0;
   font-size: 1.6rem;
+  font-family: 'Poppins', sans-serif;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0.7))), url(../../images/concert-people.jpeg);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../../images/concert-people.jpeg);
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
+}
+
+h1, h2, h3, h4, p {
+  margin: 0;
+  padding: 0;
 }
 
 :root {
   --purple-bg: #845ec2;
-  --brown-bg: #4b4453;
+  --brown-bg: #595959;
   --pinky-gray: #a5dcc0;
   --orange-salmon: #ED6A6A;
-  --orange-light: #ff8066;
+  --orange-title: rgba(245,61,13,1);
 }
 
 header {
-  padding: 1rem 1rem;
-  font-size: 3rem;
-  -webkit-box-shadow: 0px 0px 21px 4px rgba(0, 0, 0, 0.75);
-          box-shadow: 0px 0px 21px 4px rgba(0, 0, 0, 0.75);
+  background-color: rgba(255, 255, 255, 0.8);
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
 }
 
 header .mobile-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-family: 'Pacifico', cursive;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-  position: relative;
+  padding: 1rem 2rem;
+  font-size: 4rem;
 }
 
-header .mobile-nav a {
-  text-decoration: none;
-  color: black;
-}
-
-header .mobile-nav a span {
-  color: var(--orange-salmon);
-}
-
-header .mobile-nav i {
-  position: absolute;
-  left: 0;
+main {
+  margin-top: 6rem;
 }
 
 main .intro-section {
-  position: relative;
-  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -69,81 +62,61 @@ main .intro-section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  height: 100vh;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  margin: 1rem 1rem 0 1rem;
 }
 
-main .intro-section .intro-bg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0.7))), url(../../images/concert-people.jpeg);
-  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../../images/concert-people.jpeg);
-  -webkit-filter: blur(3px) grayscale(100%);
-          filter: blur(3px) grayscale(100%);
-  background-repeat: no-repeat, no-repeat;
-  background-size: cover, cover;
-  z-index: -1;
-}
-
-main .intro-section .intro-content {
-  padding: 1rem 2rem;
-}
-
-main .intro-section .intro-content p, main .intro-section .intro-content h1, main .intro-section .intro-content h2 {
-  margin: 0;
-  padding: 0;
-  color: var(--orange-light);
-}
-
-main .intro-section .intro-content h1 {
-  font-family: 'Pacifico', cursive;
-  font-size: 3.5rem;
-  line-height: 4rem;
-  text-align: center;
-  color: var(--orange-salmon);
+main .intro-section h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #f53d0d;
+  line-height: 3.5rem;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
   margin-bottom: 2rem;
 }
 
-main .intro-section .intro-content h2 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 300;
-  font-size: 1.8rem;
-  margin-bottom: 2rem;
+main .intro-section h2 {
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
+  font-weight: 200;
+  color: var(--orange-title);
 }
 
-main .intro-section .intro-content p {
-  color: var(--orange-light);
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-  font-size: 1.5rem;
-}
-
-main .intro-section .intro-content .description-container {
+main .intro-section .text-container {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
   background-color: white;
-  padding: 1rem;
-  border-radius: 5px;
+  padding: 1.8rem;
+  color: var(--brown-bg);
+  font-size: 1.3rem;
   margin-bottom: 2rem;
 }
 
-main .intro-section .intro-content .description-container p {
-  color: grey;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  font-size: 1.8rem;
-  line-height: 1.8rem;
+main .intro-section h3 {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--brown-bg);
 }
 
-main .program-section {
-  background-color: #06073d;
-  opacity: 0.9;
-  background-image: linear-gradient(to right, #000000, #000000 10.5px, #06073d 10.5px, #06073d);
-  background-size: 21px 100%;
-  padding: 5rem 2rem;
-  color: white;
+main .intro-section h4 {
+  -webkit-box-ordinal-group: 5;
+      -ms-flex-order: 4;
+          order: 4;
+  font-weight: 300;
+  color: var(--brown-bg);
+}
+
+main .spaces {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -154,56 +127,62 @@ main .program-section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 4rem 2rem;
+  background-color: #000000;
+  opacity: 0.8;
+  background: radial-gradient(circle, transparent 20%, #000000 20%, #000000 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #000000 20%, #000000 80%, transparent 80%, transparent) 10px 10px, linear-gradient(#262968 0.8px, transparent 0.8px) 0 -0.4px, linear-gradient(90deg, #262968 0.8px, #000000 0.8px) -0.4px 0;
+  background-size: 20px 20px, 20px 20px, 10px 10px, 10px 10px;
 }
 
-main .program-section h2, main .program-section h3, main .program-section p {
-  margin: 0;
-  padding: 0;
+main .spaces h2 {
+  color: white;
+  font-weight: 400;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 
-main .program-section h2 {
-  font-family: 'Pacifico', cursive;
-  font-size: 3.5rem;
-  line-height: 4rem;
+main .spaces .horizontal-bar {
+  width: 5rem;
+  height: 0.2rem;
+  background-color: #F54E38;
   margin-bottom: 4rem;
 }
 
-main .program-section article {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+main .spaces a {
+  text-decoration: none;
+  color: white;
+  background-color: #F54E38;
+  padding: 3rem;
+}
+
+main .spaces .card-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 0.3fr 0.6fr 0.8fr;
+      grid-template-columns: 0.3fr 0.6fr 0.8fr;
+  color: white;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  background-color: rgba(40, 40, 40, 0.756);
-  padding: 1rem;
+  justify-items: center;
+  background-color: rgba(45, 45, 45, 0.5);
+  padding: 1rem 1rem;
   margin-bottom: 1rem;
-  margin-left: 0;
 }
 
-main .program-section article i {
-  -ms-flex-preferred-size: 10%;
-      flex-basis: 10%;
-  font-size: 3rem;
-  text-align: center;
+main .spaces .card-container i {
+  font-size: 5rem;
 }
 
-main .program-section article h3 {
-  -ms-flex-preferred-size: 25%;
-      flex-basis: 25%;
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.7rem;
-  margin-right: 2rem;
+main .spaces .card-container h3 {
+  color: #F54E38;
+  font-size: 1.7rem;
+  -ms-grid-column-align: start;
+      justify-self: start;
+  margin-left: 0.5rem;
 }
 
-main .program-section article p {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
-  font-family: 'Poppins', sans-serif;
+main .spaces .card-container p {
   font-size: 1.3rem;
-  line-height: 1.7rem;
-  font-weight: 200;
 }
 /*# sourceMappingURL=main.css.map */
