@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Poppins:wght@200;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Koulen&family=Pacifico&family=Permanent+Marker&family=Satisfy&display=swap');
 
 html {
@@ -12,12 +12,7 @@ html {
 body {
   margin: 0;
   font-size: 1.6rem;
-  
   font-family: 'Poppins', sans-serif;
-   background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../../images/concert-people.jpeg);
-  // filter: blur(3px) grayscale(100%);
-   background-repeat: no-repeat, no-repeat;
-   background-size: cover, cover;
 }
 
 h1,h2,h3,h4,p {
@@ -35,7 +30,7 @@ h1,h2,h3,h4,p {
 }
 
 header {
-  background-color: rgba(255,255,255,0.8);
+  background-color: rgba(255,255,255,0.5);
   position: fixed;
   top: 0;
   overflow: hidden;
@@ -43,34 +38,38 @@ header {
 
   .mobile-nav {
     display: flex;
-    padding: 1rem 2rem;
+    padding: 0.5rem 2rem;
     font-size: 4rem;
   }
 }
 
 main {
-  margin-top: 6rem;
 
   .intro-section {
     display: flex;
     flex-direction: column;
     height: 100vh;
     justify-content: center;
-    margin: 1rem 1rem 0 1rem;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../../images/concert-people.jpeg);
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, cover;
 
     h1 {
-      font-size: 3rem;
-      font-weight: 900;
+      font-size: 6rem;
+      font-weight: 800;
       color: rgba(245,61,13,1);
-      line-height: 3.5rem;
+      line-height: 6rem;
       order: 1;
       margin-bottom: 2rem;
+      margin-left: 2rem;
     }
 
     h2 {
       order: 0;
+      font-size: 4rem;
       font-weight: 200;
       color: var(--orange-title);
+      margin-left: 2rem;
     }
 
     .text-container {
@@ -78,26 +77,31 @@ main {
       background-color: white;
       padding: 1.8rem;
       color: var(--brown-bg);
-      font-size: 1.3rem;
+      font-size: 2.8rem;
       margin-bottom: 2rem;
+      margin-left: 2rem;
+      margin-right: 2rem;
     }
 
     h3 {
       order: 3;
-      font-size: 2.5rem;
-      font-weight: 900;
+      font-size: 5rem;
+      font-weight: 800;
       color: var(--brown-bg);
+      margin-left: 2rem;
     }
 
     h4 {
       order: 4;
+      font-size: 3rem;
       font-weight: 300;
       color: var(--brown-bg);
+      margin-left: 2rem;
     }
   }
 
   // Spaces Section
-  .spaces {
+  .spaces-section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -111,7 +115,7 @@ main {
       color: white;
       font-weight: 400;
       font-size: 2.5rem;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
     }
 
     .horizontal-bar {
@@ -126,6 +130,7 @@ main {
       color: white;
       background-color: #F54E38;
       padding: 3rem;
+      margin-top: 3rem;
     }
 
     .card-container {
@@ -151,6 +156,74 @@ main {
 
       p {
         font-size: 1.3rem;
+      }
+    }
+  }
+
+  // Presented Section
+  .presented-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 400;
+      margin-top: 4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .horizontal-bar {
+      width: 5rem;
+      height: 0.2rem;
+      background-color: #F54E38;
+      margin-bottom: 4rem;
+    }
+
+    .band-container {
+      display: flex;
+      margin-bottom: 3rem;
+      padding: 0 2rem;
+
+      .grid-1 {
+        display: flex;
+        align-items: flex-end;
+        justify-content: end;
+        flex-basis: 60%;
+
+          img {
+            width: 100%;
+            height: auto;
+          }
+      }
+
+      .grid-2 {
+        padding-left: 2rem;
+
+        h3 {
+          font-weight: 600;
+          font-size: 1.5;
+        }
+
+        h4 {
+          font-weight: 400;
+          color: #F54E38;
+          font-style: italic;
+          line-height: 1.8rem;
+          font-size: 1.3rem;
+        }
+
+        .card-bar {
+          width: 3rem;
+          height: 0.2rem;
+          background-color: grey;
+        }
+
+        p {
+          font-weight: 300;
+          font-size: 1.2rem;
+          line-height: 1.5rem;
+        }
       }
     }
   }

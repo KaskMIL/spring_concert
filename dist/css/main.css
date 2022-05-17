@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Poppins:wght@200;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Koulen&family=Pacifico&family=Permanent+Marker&family=Satisfy&display=swap");
 html {
   -webkit-box-sizing: border-box;
@@ -15,10 +15,6 @@ body {
   margin: 0;
   font-size: 1.6rem;
   font-family: 'Poppins', sans-serif;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0.7))), url(../../images/concert-people.jpeg);
-  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../../images/concert-people.jpeg);
-  background-repeat: no-repeat, no-repeat;
-  background-size: cover, cover;
 }
 
 h1, h2, h3, h4, p {
@@ -35,7 +31,7 @@ h1, h2, h3, h4, p {
 }
 
 header {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.5);
   position: fixed;
   top: 0;
   overflow: hidden;
@@ -46,12 +42,8 @@ header .mobile-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
   font-size: 4rem;
-}
-
-main {
-  margin-top: 6rem;
 }
 
 main .intro-section {
@@ -66,26 +58,32 @@ main .intro-section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 1rem 1rem 0 1rem;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0.7))), url(../../images/concert-people.jpeg);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../../images/concert-people.jpeg);
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
 }
 
 main .intro-section h1 {
-  font-size: 3rem;
-  font-weight: 900;
+  font-size: 6rem;
+  font-weight: 800;
   color: #f53d0d;
-  line-height: 3.5rem;
+  line-height: 6rem;
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
   margin-bottom: 2rem;
+  margin-left: 2rem;
 }
 
 main .intro-section h2 {
   -webkit-box-ordinal-group: 1;
       -ms-flex-order: 0;
           order: 0;
+  font-size: 4rem;
   font-weight: 200;
   color: var(--orange-title);
+  margin-left: 2rem;
 }
 
 main .intro-section .text-container {
@@ -95,28 +93,33 @@ main .intro-section .text-container {
   background-color: white;
   padding: 1.8rem;
   color: var(--brown-bg);
-  font-size: 1.3rem;
+  font-size: 2.8rem;
   margin-bottom: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 main .intro-section h3 {
   -webkit-box-ordinal-group: 4;
       -ms-flex-order: 3;
           order: 3;
-  font-size: 2.5rem;
-  font-weight: 900;
+  font-size: 5rem;
+  font-weight: 800;
   color: var(--brown-bg);
+  margin-left: 2rem;
 }
 
 main .intro-section h4 {
   -webkit-box-ordinal-group: 5;
       -ms-flex-order: 4;
           order: 4;
+  font-size: 3rem;
   font-weight: 300;
   color: var(--brown-bg);
+  margin-left: 2rem;
 }
 
-main .spaces {
+main .spaces-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -134,28 +137,29 @@ main .spaces {
   background-size: 20px 20px, 20px 20px, 10px 10px, 10px 10px;
 }
 
-main .spaces h2 {
+main .spaces-section h2 {
   color: white;
   font-weight: 400;
   font-size: 2.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
-main .spaces .horizontal-bar {
+main .spaces-section .horizontal-bar {
   width: 5rem;
   height: 0.2rem;
   background-color: #F54E38;
   margin-bottom: 4rem;
 }
 
-main .spaces a {
+main .spaces-section a {
   text-decoration: none;
   color: white;
   background-color: #F54E38;
   padding: 3rem;
+  margin-top: 3rem;
 }
 
-main .spaces .card-container {
+main .spaces-section .card-container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 0.3fr 0.6fr 0.8fr;
@@ -170,11 +174,11 @@ main .spaces .card-container {
   margin-bottom: 1rem;
 }
 
-main .spaces .card-container i {
+main .spaces-section .card-container i {
   font-size: 5rem;
 }
 
-main .spaces .card-container h3 {
+main .spaces-section .card-container h3 {
   color: #F54E38;
   font-size: 1.7rem;
   -ms-grid-column-align: start;
@@ -182,7 +186,90 @@ main .spaces .card-container h3 {
   margin-left: 0.5rem;
 }
 
-main .spaces .card-container p {
+main .spaces-section .card-container p {
   font-size: 1.3rem;
+}
+
+main .presented-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .presented-section h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-top: 4rem;
+  margin-bottom: 0.5rem;
+}
+
+main .presented-section .horizontal-bar {
+  width: 5rem;
+  height: 0.2rem;
+  background-color: #F54E38;
+  margin-bottom: 4rem;
+}
+
+main .presented-section .band-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 3rem;
+  padding: 0 2rem;
+}
+
+main .presented-section .band-container .grid-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+}
+
+main .presented-section .band-container .grid-1 img {
+  width: 100%;
+  height: auto;
+}
+
+main .presented-section .band-container .grid-2 {
+  padding-left: 2rem;
+}
+
+main .presented-section .band-container .grid-2 h3 {
+  font-weight: 600;
+  font-size: 1.5;
+}
+
+main .presented-section .band-container .grid-2 h4 {
+  font-weight: 400;
+  color: #F54E38;
+  font-style: italic;
+  line-height: 1.8rem;
+  font-size: 1.3rem;
+}
+
+main .presented-section .band-container .grid-2 .card-bar {
+  width: 3rem;
+  height: 0.2rem;
+  background-color: grey;
+}
+
+main .presented-section .band-container .grid-2 p {
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
 }
 /*# sourceMappingURL=main.css.map */
