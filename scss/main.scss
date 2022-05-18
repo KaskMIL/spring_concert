@@ -81,20 +81,22 @@ header {
 
     i {
       align-self: flex-end;
-      font-size: 6rem;
+      font-size: 4rem;
       color: var(--orange-title);
       margin: 2rem 2rem 0 0;
     }
 
     ul {
       list-style-type: none;
-      font-size: 5rem;
+      font-size: 3rem;
       font-weight: 800;
       align-self: center;
+      margin: 0;
+      padding: 0;
 
       li {
         text-align: center;
-        margin-bottom: 10rem;
+        margin-bottom: 2rem;
         padding: 3rem;
         border-bottom: 0.2rem var(--orange-title) solid;
 
@@ -238,7 +240,7 @@ main {
       background-color: white;
       padding: 1.8rem;
       color: var(--brown-bg);
-      font-size: 2.8rem;
+      font-size: 2rem;
       margin-bottom: 2rem;
       margin-left: 2rem;
       margin-right: 2rem;
@@ -260,6 +262,10 @@ main {
       margin-left: 2rem;
     }
 
+    .path {
+      display: none;
+    }
+
     @media screen and (min-width: 998px) {
       padding: 0 25rem;
 
@@ -273,6 +279,56 @@ main {
 
       h4 {
         font-size: 2rem;
+      }
+    }
+  }
+
+  .intro-about {
+    h1,h2,h4, .text-container {
+      text-align: center;
+      
+
+    }
+
+    h4 {
+      margin: 0;
+      font-size: 2rem;
+      padding-bottom: 2rem;
+    }
+
+  .about-mail {
+    order: 5;
+    text-align: center;
+    color: var(--brown-bg);
+    font-size: 2rem;
+  }
+
+    @media screen and (min-width:998px) {
+      .path {
+        display: block;
+        position: absolute;
+        top: 12rem;
+        right: 10rem;
+
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          display: flex;
+
+          li {
+            margin-left: 1rem;
+    
+            a {
+              text-decoration: none;
+              color: var(--obscure);
+            }
+    
+            .greater {
+              color: var(--orange-title);
+            }
+          }
+        }
       }
     }
   }
@@ -396,6 +452,54 @@ main {
 
       .spaces-desktop-btn:hover {
         text-decoration: underline;
+      }
+    }
+  }
+
+  // Logo Section
+  .logo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    padding: 4rem 4rem;
+
+    h2 {
+      font-weight: 400;
+      font-size: 5rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .horizontal-bar {
+      width: 5rem;
+      height: 0.2rem;
+      background-color: var(--orange-title);
+      margin-bottom: 4rem;
+    }
+
+    h3 {
+      font-weight: 400;
+      font-size: 2.5rem;
+      padding: 0 8rem;
+      color: var(--brown-bg);
+      text-align: center;
+      margin-bottom: 10rem;
+    }
+
+    .logo-container {
+      border: 0.1rem solid var(--brown-bg);
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 10rem 0;
+
+      h4 {
+        color: var(--orange-title);
+        font-size: 6rem;
+        font-weight: 900;
+        line-height: 4.5rem;
+        
       }
     }
   }

@@ -88,23 +88,25 @@ header .mobile-menu-on {
 header .mobile-menu-on i {
   -ms-flex-item-align: end;
       align-self: flex-end;
-  font-size: 6rem;
+  font-size: 4rem;
   color: var(--orange-title);
   margin: 2rem 2rem 0 0;
 }
 
 header .mobile-menu-on ul {
   list-style-type: none;
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: 800;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  margin: 0;
+  padding: 0;
 }
 
 header .mobile-menu-on ul li {
   text-align: center;
-  margin-bottom: 10rem;
+  margin-bottom: 2rem;
   padding: 3rem;
   border-bottom: 0.2rem var(--orange-title) solid;
 }
@@ -265,7 +267,7 @@ main .intro-section .text-container {
   background-color: white;
   padding: 1.8rem;
   color: var(--brown-bg);
-  font-size: 2.8rem;
+  font-size: 2rem;
   margin-bottom: 2rem;
   margin-left: 2rem;
   margin-right: 2rem;
@@ -291,6 +293,10 @@ main .intro-section h4 {
   margin-left: 2rem;
 }
 
+main .intro-section .path {
+  display: none;
+}
+
 @media screen and (min-width: 998px) {
   main .intro-section {
     padding: 0 25rem;
@@ -303,6 +309,52 @@ main .intro-section h4 {
   }
   main .intro-section h4 {
     font-size: 2rem;
+  }
+}
+
+main .intro-about h1, main .intro-about h2, main .intro-about h4, main .intro-about .text-container {
+  text-align: center;
+}
+
+main .intro-about h4 {
+  margin: 0;
+  font-size: 2rem;
+  padding-bottom: 2rem;
+}
+
+main .intro-about .about-mail {
+  -webkit-box-ordinal-group: 6;
+      -ms-flex-order: 5;
+          order: 5;
+  text-align: center;
+  color: var(--brown-bg);
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 998px) {
+  main .intro-about .path {
+    display: block;
+    position: absolute;
+    top: 12rem;
+    right: 10rem;
+  }
+  main .intro-about .path ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  main .intro-about .path ul li {
+    margin-left: 1rem;
+  }
+  main .intro-about .path ul li a {
+    text-decoration: none;
+    color: var(--obscure);
+  }
+  main .intro-about .path ul li .greater {
+    color: var(--orange-title);
   }
 }
 
@@ -434,6 +486,63 @@ main .spaces-section .card-container p {
   main .spaces-section .spaces-desktop-btn:hover {
     text-decoration: underline;
   }
+}
+
+main .logo-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  padding: 4rem 4rem;
+}
+
+main .logo-section h2 {
+  font-weight: 400;
+  font-size: 5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+main .logo-section .horizontal-bar {
+  width: 5rem;
+  height: 0.2rem;
+  background-color: var(--orange-title);
+  margin-bottom: 4rem;
+}
+
+main .logo-section h3 {
+  font-weight: 400;
+  font-size: 2.5rem;
+  padding: 0 8rem;
+  color: var(--brown-bg);
+  text-align: center;
+  margin-bottom: 10rem;
+}
+
+main .logo-section .logo-container {
+  border: 0.1rem solid var(--brown-bg);
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10rem 0;
+}
+
+main .logo-section .logo-container h4 {
+  color: var(--orange-title);
+  font-size: 6rem;
+  font-weight: 900;
+  line-height: 4.5rem;
 }
 
 main .presented-section {
