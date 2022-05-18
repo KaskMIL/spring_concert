@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Koulen&family=Pacifico&family=Permanent+Marker&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 html {
   box-sizing: border-box;
@@ -12,7 +13,7 @@ html {
 body {
   margin: 0;
   font-size: 1.6rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 h1,h2,h3,h4,p {
@@ -22,11 +23,10 @@ h1,h2,h3,h4,p {
 
 // Colors
 :root {
-  --purple-bg: #845ec2;
   --brown-bg: #595959;
-  --pinky-gray: #a5dcc0;
-  --orange-salmon: #ED6A6A;
   --orange-title: #ec5242;
+  --obscure: #272a31;
+  --lighty: #d3d3d3;
 }
 
 // Apply to body
@@ -39,22 +39,22 @@ h1,h2,h3,h4,p {
 header {
 
   .mobile-nav {
-    display: flex;
     background-color: rgba(255,255,255,0.8);
     position: fixed;
     top: 0;
     overflow: hidden;
     width: 100%;
-    padding: 0.5rem 2rem;
     font-size: 4rem;
 
-    .logo {
+    .tools-nav {
       display: none;
     }
 
-    ul {
-      display: none;
-    }
+     .nav-desktop {
+       .logo,ul {
+         display: none;
+       }
+     }
 
     a {
       text-decoration: none;
@@ -106,40 +106,94 @@ header {
 
   @media screen and (min-width: 768px) {
     .mobile-nav {
-      #menu-open-btn {
-        display: none;
-      }
-
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 5rem;
-
-      .logo {
-        display: block;
-        font-size: 3rem;
-        font-weight: 800;
-        color: var(--orange-title);
-        line-height: 3rem;
-      }
-
-      ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
+      .tools-nav {
+        background-color: var(--obscure);
         display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        
+        ul {
+          display: flex;
+          list-style-type: none;
+          margin: 0 6rem 0 0;
+          padding: 1rem 0;
 
-        li {
-          font-weight: 300;
-          font-size: 2rem;
-          margin-left: 5rem;
+          li {
+            margin-left: 2rem;
+            display: flex;
+            transition: 0.5s;
+            a {
+              font-weight: 400;
+              font-size: 1.5rem;
+              color: white;
+            }
+          }
+
+          li:hover {
+            transform: scale(1.2);
+          }
         }
       }
 
-      a:hover {
-        color: var(--orange-title);
+      .nav-desktop {
+        #menu-open-btn {
+          display: none;
+        }
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 6rem;
+
+        .logo {
+          display: block;
+          color: var(--orange-title);
+          font-size: 2.5rem;
+          font-weight: 900;
+          line-height: 2.5rem;
+        }
+
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          display: flex;
+
+          li {
+            margin-left: 3rem;
+            display: flex;
+            align-items: center;
+
+            a {
+              font-weight: 400;
+              font-size: 1.8rem;
+              color: var(--obscure);
+            }
+          }
+
+          .square {
+            border: 0.3rem solid var(--orange-title);
+            padding: 1rem 2rem;
+            margin-left: 5rem;
+          }
+
+          li:hover {
+            a {
+              color: var(--orange-title);
+            }
+          }
+
+          .square:hover {
+            background-color: var(--orange-title);
+            cursor: pointer;
+            a {
+              color: white;
+            }
+          }
+        }
       }
     }
+    
   }
 }
 
@@ -156,7 +210,7 @@ main {
 
     h1 {
       font-size: 6rem;
-      font-weight: 800;
+      font-weight: 900;
       color: var(--orange-title);
       line-height: 6rem;
       order: 1;
@@ -167,7 +221,7 @@ main {
     h2 {
       order: 0;
       font-size: 4rem;
-      font-weight: 200;
+      font-weight: 300;
       color: var(--orange-title);
       margin-left: 2rem;
     }
@@ -194,7 +248,7 @@ main {
     h4 {
       order: 4;
       font-size: 3rem;
-      font-weight: 300;
+      font-weight: 400;
       color: var(--brown-bg);
       margin-left: 2rem;
     }
@@ -371,6 +425,35 @@ main {
           font-weight: 300;
           font-size: 1.8rem;
           line-height: 2.5rem;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 998px) {
+    .cards-container {
+      display: flex;
+      flex-wrap: wrap;
+
+      .band-container {
+        width: 45%;
+
+        .grid-2 {
+          flex-basis: 50%;
+
+          h3 {
+            font-size: 2rem;
+          }
+
+          h4 {
+            font-size: 1.5rem;
+            line-height: 1.5rem;
+          }
+
+          p {
+            font-size: 1.4rem;
+            line-height: 1.5rem;
+          }
         }
       }
     }
