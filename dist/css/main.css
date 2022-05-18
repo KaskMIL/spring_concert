@@ -543,7 +543,15 @@ main .logo-section .logo-container h4 {
   color: var(--orange-title);
   font-size: 6rem;
   font-weight: 900;
-  line-height: 4.5rem;
+  line-height: 5rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+main .logo-section .logo-container h4:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  cursor: pointer;
 }
 
 main .past-section {
@@ -583,8 +591,24 @@ main .past-section h3 {
   margin-bottom: 10rem;
 }
 
-main .past-section .first-container {
-  width: 80%;
+main .past-section .events-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .past-section .events-container .first-container {
+  width: 350px;
   height: 350px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 0, 0, 0.5)), to(rgba(255, 0, 0, 0.5))), url(../../images/public-sing.jpeg);
   background-image: linear-gradient(rgba(255, 0, 0, 0.5), rgba(255, 0, 0, 0.5)), url(../../images/public-sing.jpeg);
@@ -605,21 +629,24 @@ main .past-section .first-container {
           align-items: center;
   color: white;
   margin-bottom: 3rem;
+  text-align: center;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-main .past-section .first-container h4 {
+main .past-section .events-container .first-container h4 {
   font-size: 5rem;
   margin-bottom: 1rem;
   font-weight: 700;
 }
 
-main .past-section .first-container p {
-  font-size: 3.5rem;
+main .past-section .events-container .first-container p {
+  font-size: 2.5rem;
   font-weight: 300;
 }
 
-main .past-section .second-container {
-  width: 80%;
+main .past-section .events-container .second-container {
+  width: 350px;
   height: 350px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 0, 0, 0.5)), to(rgba(255, 0, 0, 0.5))), url(../../images/concert-people.jpeg);
   background-image: linear-gradient(rgba(255, 0, 0, 0.5), rgba(255, 0, 0, 0.5)), url(../../images/concert-people.jpeg);
@@ -639,17 +666,46 @@ main .past-section .second-container {
       -ms-flex-align: center;
           align-items: center;
   color: white;
+  text-align: center;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-main .past-section .second-container h4 {
+main .past-section .events-container .second-container h4 {
   font-size: 5rem;
   margin-bottom: 1rem;
   font-weight: 700;
 }
 
-main .past-section .second-container p {
-  font-size: 3.5rem;
+main .past-section .events-container .second-container p {
+  font-size: 2.5rem;
   font-weight: 300;
+}
+
+@media screen and (min-width: 768px) {
+  main .past-section .events-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -webkit-box-pack: baseline;
+        -ms-flex-pack: baseline;
+            justify-content: baseline;
+    gap: 2rem;
+  }
+  main .past-section .events-container .first-container:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    cursor: pointer;
+  }
+  main .past-section .events-container .second-container:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    cursor: pointer;
+  }
 }
 
 main .presented-section {
@@ -833,10 +889,16 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  gap: 1rem;
 }
 
 footer .logo {
-  margin-right: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 footer .logo a {
@@ -854,8 +916,8 @@ footer .info {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-preferred-size: 60%;
-      flex-basis: 60%;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
 }
 
 footer .info p {
@@ -871,6 +933,10 @@ footer .info .copyright {
 }
 
 @media screen and (min-width: 824px) {
+  footer .logo {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
   footer .logo a {
     font-size: 3rem;
   }

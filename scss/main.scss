@@ -499,8 +499,13 @@ main {
         color: var(--orange-title);
         font-size: 6rem;
         font-weight: 900;
-        line-height: 4.5rem;
-        
+        line-height: 5rem;
+        transition: 0.5s;
+      }
+
+      h4:hover {
+        transform: scale(1.1);
+        cursor: pointer;
       }
     }
   }
@@ -535,52 +540,82 @@ main {
       margin-bottom: 10rem;
     }
 
-    .first-container {
-      width: 80%;
-      height: 350px;
-      background-image: linear-gradient(rgba(255,0,0,0.5), rgba(255,0,0,0.5)) ,url(../../images/public-sing.jpeg);
-      background-repeat: no-repeat no-repeat;
-      background-size: cover;
+    .events-container {
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      color: white;
-      margin-bottom: 3rem;
+      justify-content: center;
 
-      h4 {
-        font-size: 5rem;
-        margin-bottom: 1rem;
-        font-weight: 700;
+      .first-container {
+        width: 350px;
+        height: 350px;
+        background-image: linear-gradient(rgba(255,0,0,0.5), rgba(255,0,0,0.5)) ,url(../../images/public-sing.jpeg);
+        background-repeat: no-repeat no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        margin-bottom: 3rem;
+        text-align: center;
+        transition: 0.5s;
+  
+        h4 {
+          font-size: 5rem;
+          margin-bottom: 1rem;
+          font-weight: 700;
+        }
+  
+        p {
+          font-size: 2.5rem;
+          font-weight: 300;
+        }
       }
-
-      p {
-        font-size: 3.5rem;
-        font-weight: 300;
+  
+      .second-container {
+        width: 350px;
+        height: 350px;
+        background-image: linear-gradient(rgba(255,0,0,0.5), rgba(255,0,0,0.5)) ,url(../../images/concert-people.jpeg);
+        background-repeat: no-repeat no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-align: center;
+        transition: 0.5s;
+  
+        h4 {
+          font-size: 5rem;
+          margin-bottom: 1rem;
+          font-weight: 700;
+        }
+  
+        p {
+          font-size: 2.5rem;
+          font-weight: 300;
+        }
       }
     }
 
-    .second-container {
-      width: 80%;
-      height: 350px;
-      background-image: linear-gradient(rgba(255,0,0,0.5), rgba(255,0,0,0.5)) ,url(../../images/concert-people.jpeg);
-      background-repeat: no-repeat no-repeat;
-      background-size: cover;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      color: white;
+    @media screen and (min-width: 768px) {
+      .events-container {
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: baseline;
+        gap: 2rem;
 
-      h4 {
-        font-size: 5rem;
-        margin-bottom: 1rem;
-        font-weight: 700;
-      }
+        .first-container:hover {
+          transform: scale(1.1);
+          cursor: pointer;
+        }
 
-      p {
-        font-size: 3.5rem;
-        font-weight: 300;
+        .second-container:hover {
+          transform: scale(1.1);
+          cursor: pointer;
+        }
       }
     }
   }
@@ -731,11 +766,12 @@ main {
 footer {
   display: flex;
   padding: 2rem 2rem;
-  
   justify-content: center;
+  gap: 1rem;
 
   .logo {
-    margin-right: 2rem;
+    display: flex;
+    justify-content: flex-end;
 
     a {
       text-decoration: none;
@@ -748,7 +784,7 @@ footer {
   .info {
     display: flex;
     flex-direction: column;
-    flex-basis: 60%;
+    flex-basis: 50%;
 
     p {
       color: grey;
@@ -765,6 +801,7 @@ footer {
 
   @media screen and (min-width: 824px) {
     .logo {
+      flex-basis: 50%;
       a {
         font-size: 3rem;
       }
