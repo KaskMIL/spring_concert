@@ -5,9 +5,9 @@ const closeMenuBtn = document.getElementById('menu-close-btn');
 const introBtn = document.getElementById('intro-btn');
 const spacesBtn = document.getElementById('spaces-btn');
 const bandsBtn = document.getElementById('bands-btn');
-const introSection = document.getElementById('intro');
-const sapcesSection = document.getElementById('spaces');
-const bandsSection = document.getElementById('bands');
+const sponsorBtn = document.getElementById('sponsor-btn');
+const newsBtn = document.getElementById('news-btn');
+const campBtn = document.getElementById('camp-btn');
 const body = document.body;
 
 function closeMenu() {
@@ -37,5 +37,17 @@ spacesBtn.addEventListener('click', () => {
 });
 
 bandsBtn.addEventListener('click', () => {
+  closeMenu();
+});
+
+sponsorBtn.addEventListener('click', () => {
+  closeMenu();
+});
+
+newsBtn.addEventListener('click', () => {
+  closeMenu();
+});
+
+campBtn.addEventListener('click', () => {
   closeMenu();
 });
