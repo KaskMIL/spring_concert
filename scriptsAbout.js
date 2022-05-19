@@ -8,21 +8,21 @@ const pastBtn = document.getElementById('past-btn');
 const sponsorBtn = document.getElementById('sponsor-about-btn');
 const newsBtn = document.getElementById('news-about-btn');
 const campBtn = document.getElementById('camp-about-btn');
-const body = document.body;
+const $body = document.body;
 
 // Functions
 function closeMenu() {
   aboutNavHam.classList.remove('mobile-menu-off');
   mobileMenuAbout.classList.add('mobile-menu-off');
   mobileMenuAbout.classList.remove('mobile-menu-on');
-  body.classList.remove('disable-scroll');
+  $body.classList.remove('disable-scroll');
 };
 
 aboutOpenBtn.addEventListener('click', () => {
   aboutNavHam.classList.add('mobile-menu-off');
   mobileMenuAbout.classList.remove('mobile-menu-off');
   mobileMenuAbout.classList.add('mobile-menu-on');
-  body.classList.add('disable-scroll');
+  $body.classList.add('disable-scroll');
 });
 
 aboutCloseBtn.addEventListener('click', () => {

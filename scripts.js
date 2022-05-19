@@ -8,21 +8,21 @@ const bandsBtn = document.getElementById('bands-btn');
 const sponsorBtn = document.getElementById('sponsor-btn');
 const newsBtn = document.getElementById('news-btn');
 const campBtn = document.getElementById('camp-btn');
-const body = document.body;
+const $body = document.body;
 
 // Funtions
 function closeMenu() {
   menuNavHamburger.classList.remove('mobile-menu-off');
   menuNavOpen.classList.add('mobile-menu-off');
   menuNavOpen.classList.remove('mobile-menu-on');
-  body.classList.remove('disable-scroll');
-};
+  $body.classList.remove('disable-scroll');
+}
 
 openMenuBtn.addEventListener('click', () => {
   menuNavHamburger.classList.add('mobile-menu-off');
   menuNavOpen.classList.remove('mobile-menu-off');
   menuNavOpen.classList.add('mobile-menu-on');
-  body.classList.add('disable-scroll');
+  $body.classList.add('disable-scroll');
 });
 
 closeMenuBtn.addEventListener('click', () => {
@@ -85,7 +85,7 @@ const dataBands = [{
   paragraphTwo: ' label Lookout! Records. In 1994, their major-label debut ',
   paragraphThree: 'Dookie, released through Reprise Records, became a ',
   paragraphFour: 'breakout success and eventually shipped over 10 million ',
-  paragraphFive: 'copies in the U.S.'
+  paragraphFive: 'copies in the U.S.',
 },
 {
   title: 'Jack Johnson',
@@ -119,11 +119,11 @@ const dataBands = [{
   paragraphThree: 'time. They are the most successful band in the history',
   paragraphFour: ' of alternative ',
   paragraphFive: 'rock.',
-}]
+}];
 
 const cardsContainer = document.getElementById('cards-container');
 
-for(let i = 0; i < dataBands.length; i+=1){
+for (let i = 0; i < dataBands.length; i +=1) {
   const article = document.createElement('article');
   article.classList.add('band-container');
 
@@ -138,5 +138,5 @@ for(let i = 0; i < dataBands.length; i+=1){
     ${dataBands[i].paragraphFive} </p>
    </div>`;
 
-   cardsContainer.appendChild(article);
+  cardsContainer.appendChild(article);
 }
