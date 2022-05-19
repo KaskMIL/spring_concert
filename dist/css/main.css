@@ -274,6 +274,14 @@ header .mobile-menu-off {
   header .mobile-nav .nav-desktop #menu-open-btn {
     display: none;
   }
+  header .mobile-nav .nav-desktop #about-open-btn {
+    display: none;
+  }
+  header .mobile-nav .nav-desktop ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   header .mobile-nav .nav-desktop .logo {
     display: block;
     color: var(--orange-title);

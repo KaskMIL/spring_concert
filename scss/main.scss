@@ -241,10 +241,18 @@ header {
           display: none;
         }
 
+        #about-open-btn {
+          display: none;
+        }
+
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 1rem 6rem;
+
+        ul {
+          display: flex;
+        }
 
         .logo {
           display: block;
