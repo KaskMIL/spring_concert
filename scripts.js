@@ -132,7 +132,7 @@ for(let i = 0; i < dataBands.length; i+=1){
     </div>
     <div class="grid-2">
     <h3>${dataBands[i].title}</h3>
-    <h4>${dataBands[i].subtitle}${dataBands[i].subtitleTwo}"></div>
+    <h4>${dataBands[i].subtitle}${dataBands[i].subtitleTwo}">
     <p>${dataBands[i].paragraphOne}${dataBands[i].paragraphTwo}
     ${dataBands[i].paragraphThree}${dataBands[i].paragraphFour}
     ${dataBands[i].paragraphFive} </p>

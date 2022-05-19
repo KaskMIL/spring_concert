@@ -754,8 +754,8 @@ main .presented-section .band-container .grid-1 {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
-  -ms-flex-preferred-size: 60%;
-      flex-basis: 60%;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
 }
 
 main .presented-section .band-container .grid-1 img {
@@ -765,19 +765,26 @@ main .presented-section .band-container .grid-1 img {
 
 main .presented-section .band-container .grid-2 {
   padding-left: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 main .presented-section .band-container .grid-2 h3 {
   font-weight: 600;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 main .presented-section .band-container .grid-2 h4 {
   font-weight: 400;
   color: var(--orange-title);
   font-style: italic;
-  line-height: 3rem;
-  font-size: 2rem;
+  line-height: 1.5rem;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
@@ -790,8 +797,9 @@ main .presented-section .band-container .grid-2 .card-bar {
 
 main .presented-section .band-container .grid-2 p {
   font-weight: 300;
-  font-size: 1.8rem;
-  line-height: 2.5rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  color: var(--brown-bg);
 }
 
 @media screen and (min-width: 998px) {
