@@ -7,7 +7,9 @@ html {
   font-size: 62.5%;
 }
 
-*, *:before, *:after {
+*,
+*::before,
+*::after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
 }
@@ -38,6 +40,11 @@ p {
   margin: 0;
   height: 100%;
   overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 footer {
@@ -185,16 +192,36 @@ header .mobile-nav .nav-desktop ul {
   display: none;
 }
 
-header .mobile-nav a {
-  text-decoration: none;
-  color: black;
-}
-
 header .mobile-menu-off {
   display: none;
 }
 
 @media screen and (min-width: 768px) {
+  header .mobile-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header .mobile-nav ul li {
+    margin-left: 3rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .mobile-nav ul li a {
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: var(--obscure);
+  }
+  header .mobile-nav li:hover a {
+    color: var(--orange-title);
+  }
   header .mobile-nav .tools-nav {
     background-color: var(--obscure);
     display: -webkit-box;
@@ -254,41 +281,16 @@ header .mobile-menu-off {
     font-weight: 900;
     line-height: 2.5rem;
   }
-  header .mobile-nav .nav-desktop ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  header .mobile-nav .nav-desktop ul li {
-    margin-left: 3rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  header .mobile-nav .nav-desktop ul li a {
-    font-weight: 400;
-    font-size: 1.8rem;
-    color: var(--obscure);
-  }
-  header .mobile-nav .nav-desktop ul .square {
+  header .mobile-nav .nav-desktop .square {
     border: 0.3rem solid var(--orange-title);
     padding: 1rem 2rem;
     margin-left: 5rem;
   }
-  header .mobile-nav .nav-desktop ul li:hover a {
-    color: var(--orange-title);
-  }
-  header .mobile-nav .nav-desktop ul .square:hover {
+  header .mobile-nav .nav-desktop .square:hover {
     background-color: var(--orange-title);
     cursor: pointer;
   }
-  header .mobile-nav .nav-desktop ul .square:hover a {
+  header .mobile-nav .nav-desktop .square:hover a {
     color: white;
   }
 }

@@ -6,7 +6,10 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
 }
-*, *:before, *:after {
+
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -38,6 +41,11 @@ p {
   margin: 0;
   height: 100%;
   overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 footer {
@@ -165,11 +173,6 @@ header {
         display: none;
       }
     }
-
-    a {
-      text-decoration: none;
-      color: black;
-    }
   }
 
   .mobile-menu-off {
@@ -178,6 +181,31 @@ header {
 
   @media screen and (min-width: 768px) {
     .mobile-nav {
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+
+        li {
+          margin-left: 3rem;
+          display: flex;
+          align-items: center;
+
+          a {
+            font-weight: 400;
+            font-size: 1.8rem;
+            color: var(--obscure);
+          }
+        }
+      }
+
+      li:hover {
+        a {
+          color: var(--orange-title);
+        }
+      }
+
       .tools-nav {
         background-color: var(--obscure);
         display: flex;
@@ -226,43 +254,18 @@ header {
           line-height: 2.5rem;
         }
 
-        ul {
-          list-style-type: none;
-          margin: 0;
-          padding: 0;
-          display: flex;
+        .square {
+          border: 0.3rem solid var(--orange-title);
+          padding: 1rem 2rem;
+          margin-left: 5rem;
+        }
 
-          li {
-            margin-left: 3rem;
-            display: flex;
-            align-items: center;
+        .square:hover {
+          background-color: var(--orange-title);
+          cursor: pointer;
 
-            a {
-              font-weight: 400;
-              font-size: 1.8rem;
-              color: var(--obscure);
-            }
-          }
-
-          .square {
-            border: 0.3rem solid var(--orange-title);
-            padding: 1rem 2rem;
-            margin-left: 5rem;
-          }
-
-          li:hover {
-            a {
-              color: var(--orange-title);
-            }
-          }
-
-          .square:hover {
-            background-color: var(--orange-title);
-            cursor: pointer;
-
-            a {
-              color: white;
-            }
+          a {
+            color: white;
           }
         }
       }
