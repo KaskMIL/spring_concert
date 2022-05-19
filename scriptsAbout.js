@@ -16,7 +16,7 @@ function closeMenu() {
   mobileMenuAbout.classList.add('mobile-menu-off');
   mobileMenuAbout.classList.remove('mobile-menu-on');
   $body.classList.remove('disable-scroll');
-};
+}
 
 aboutOpenBtn.addEventListener('click', () => {
   aboutNavHam.classList.add('mobile-menu-off');
