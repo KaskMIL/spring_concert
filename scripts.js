@@ -55,7 +55,7 @@ campBtn.addEventListener('click', () => {
 
 // Cards Manipulation
 const dataBands = [{
-  name: 'Arctic Monkeys',
+  title: 'Arctic Monkeys',
   image: './images/arctic-monkeys.jpeg',
   subtitle: 'Arctic Monkeys are an English rock band formed',
   subtitleTwo: ' in Sheffield in 2002.',
@@ -66,7 +66,7 @@ const dataBands = [{
   paragraphFive: 'platinum in the US.',
 },
 {
-  name: 'Gorillaz',
+  title: 'Gorillaz',
   image: './images/gorillaz.jpeg',
   subtitle: 'Gorillaz are an English virtual band formed in 1998 by musician',
   subtitleTwo: ' Damon Albarn and artist Jamie Hewlett, from London, England.',
@@ -77,7 +77,7 @@ const dataBands = [{
   paragraphFive: 'interviews, comic strips and short cartoons.',
 },
 {
-  name: 'Green Day',
+  title: 'Green Day',
   image: './images/green-day.jpeg',
   subtitle: 'Green Day is an American rock band formed in the East Bay of',
   subtitleTwo: ' California in 1987',
@@ -120,3 +120,23 @@ const dataBands = [{
   paragraphFour: ' of alternative ',
   paragraphFive: 'rock.',
 }]
+
+const cardsContainer = document.getElementById('cards-container');
+
+for(let i = 0; i < dataBands.length; i+=1){
+  const article = document.createElement('article');
+  article.classList.add('band-container');
+
+  article.innerHTML = ` <div class="grid-1">
+    <img src="${dataBands[i].image}" alt="${dataBands[i].title}">
+    </div>
+    <div class="grid-2">
+    <h3>${dataBands[i].title}</h3>
+    <h4>${dataBands[i].subtitle}${dataBands[i].subtitleTwo}"></div>
+    <p>${dataBands[i].paragraphOne}${dataBands[i].paragraphTwo}
+    ${dataBands[i].paragraphThree}${dataBands[i].paragraphFour}
+    ${dataBands[i].paragraphFive} </p>
+   </div>`;
+
+   cardsContainer.appendChild(article);
+}
