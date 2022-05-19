@@ -123,7 +123,7 @@ const dataBands = [{
 
 const cardsContainer = document.getElementById('cards-container');
 
-for (let i = 0; i < dataBands.length; i +=1 ) {
+for (let i = 0; i < dataBands.length; i += 1) {
   const article = document.createElement('article');
   article.classList.add('band-container');
 
