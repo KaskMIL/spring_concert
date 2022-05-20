@@ -841,26 +841,15 @@ main .presented-section .band-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 3rem;
   padding: 0 2rem;
 }
 
-main .presented-section .band-container .grid-1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
-}
-
-main .presented-section .band-container .grid-1 img {
-  width: 100%;
+main .presented-section .band-container img {
+  width: 250px;
   height: auto;
 }
 

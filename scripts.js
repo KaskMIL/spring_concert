@@ -56,7 +56,7 @@ campBtn.addEventListener('click', () => {
 // Cards Manipulation
 const dataBands = [{
   title: 'Arctic Monkeys',
-  image: './images/arctic-monkeys.jpeg',
+  image: './images/large-monkeys-chess.png',
   subtitle: 'Arctic Monkeys are an English rock band formed',
   subtitleTwo: ' in Sheffield in 2002.',
   paragraphOne: 'The band\'s international success increased with their ',
@@ -67,7 +67,7 @@ const dataBands = [{
 },
 {
   title: 'Gorillaz',
-  image: './images/gorillaz.jpeg',
+  image: './images/large-gorillaz-chess.png',
   subtitle: 'Gorillaz are an English virtual band formed in 1998 by musician',
   subtitleTwo: ' Damon Albarn and artist Jamie Hewlett, from London, England.',
   paragraphOne: 'The band primarily consists of four animated members: 2-D ',
@@ -78,7 +78,7 @@ const dataBands = [{
 },
 {
   title: 'Green Day',
-  image: './images/green-day.jpeg',
+  image: './images/large-greenday-chess.png',
   subtitle: 'Green Day is an American rock band formed in the East Bay of',
   subtitleTwo: ' California in 1987',
   paragraphOne: 'The band\'s early releases were with the independent record',
@@ -89,7 +89,7 @@ const dataBands = [{
 },
 {
   title: 'Jack Johnson',
-  image: './images/jack-johnson.jpeg',
+  image: './images/large-jack-chess.png',
   subtitle: 'Jack Hody Johnson (born May 18, 1975) is an American ',
   subtitleTwo: 'singer-songwriter, filmmaker, and former professional surfer.',
   paragraphOne: 'Johnson has reached number one on the Billboard 200 chart ',
@@ -100,7 +100,7 @@ const dataBands = [{
 },
 {
   title: 'RadioHead',
-  image: './images/radio-head.jpeg',
+  image: './images/large-radio-chess.png',
   subtitle: 'Radiohead are an English rock band formed in Abingdon,',
   subtitleTwo: ' Oxfordshire, in 1985.',
   paragraphOne: ' It became a worldwide hit after the release of their debut ',
@@ -111,7 +111,7 @@ const dataBands = [{
 },
 {
   title: 'Red Hot Chilli Peppers',
-  image: './images/redhotchilipeppers.jpeg',
+  image: './images/large-rhcp-chess.png',
   subtitle: 'The Red Hot Chili Peppers are an American rock band ',
   subtitleTwo: 'formed in Los Angeles in 1983.',
   paragraphOne: 'With over 100 million records sold worldwide, the Red Hot ',
@@ -121,18 +121,17 @@ const dataBands = [{
   paragraphFive: 'rock.',
 }];
 
-const cardsContainer = document.getElementById('cards-container');
+const cardsContainer = document.getElementById('bands-cards-container');
 
 for (let i = 0; i < dataBands.length; i += 1) {
   const article = document.createElement('article');
   article.classList.add('band-container');
 
-  article.innerHTML = ` <div class="grid-1">
+  article.innerHTML = `
     <img src="${dataBands[i].image}" alt="${dataBands[i].title}">
-    </div>
     <div class="grid-2">
     <h3>${dataBands[i].title}</h3>
-    <h4>${dataBands[i].subtitle}${dataBands[i].subtitleTwo}">
+    <h4>${dataBands[i].subtitle}${dataBands[i].subtitleTwo}"</h4>
     <p>${dataBands[i].paragraphOne}${dataBands[i].paragraphTwo}
     ${dataBands[i].paragraphThree}${dataBands[i].paragraphFour}
     ${dataBands[i].paragraphFive} </p>

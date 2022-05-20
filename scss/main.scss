@@ -730,19 +730,13 @@ main {
 
     .band-container {
       display: flex;
+      align-items: center;
       margin-bottom: 3rem;
       padding: 0 2rem;
 
-      .grid-1 {
-        display: flex;
-        align-items: flex-end;
-        justify-content: end;
-        flex-basis: 50%;
-
-        img {
-          width: 100%;
-          height: auto;
-        }
+      img {
+        width: 250px;
+        height: auto;
       }
 
       .grid-2 {
