@@ -1,3 +1,4 @@
+// Dom Variables
 const openMenuBtn = document.getElementById('menu-open-btn');
 const menuNavHamburger = document.getElementById('menu-nav-ham');
 const menuNavOpen = document.getElementById('menu-nav-open');
