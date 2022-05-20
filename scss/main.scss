@@ -1,0 +1,865 @@
+@font-face {
+  font-family: 'cocogoose_proitalic';
+  src:
+    url('../../font-cocogoose/cocogoose_pro-trial-webfont.woff2') format('woff2'),
+    url('../../font-cocogoose/cocogoose_pro-trial-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'cocogoose_prolight_italic';
+  src:
+    url('../../font-cocogoose/cocogoose_pro_italic-trial-webfont.woff2') format('woff2'),
+    url('../../font-cocogoose/cocogoose_pro_italic-trial-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'cocogooselight';
+  src:
+    url('../../font-cocogoose/cocogoose_pro_light-trial-webfont.woff2') format('woff2'),
+    url('../../font-cocogoose/cocogoose_pro_light-trial-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'cocogoose_prosemilight_italic';
+  src:
+    url('../../font-cocogoose/cocogoose_pro_light_italic-trial-webfont.woff2') format('woff2'),
+    url('../../font-cocogoose/cocogoose_pro_light_italic-trial-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'cocogoosedemibold';
+  src:
+    url('../../font-cocogoose/cocogoose_pro_semilight-trial-webfont.woff2') format('woff2'),
+    url('../../font-cocogoose/cocogoose_pro_semilight-trial-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'cocogoose_prothin_italic';
+  src:
+    url('../../font-cocogoose/cocogoose_pro_semilight_italic-trial-webfont.woff2') format('woff2'),
+    url('../../font-cocogoose/cocogoose_pro_semilight_italic-trial-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'cocogoose_prothin';
+  src:
+    url('../../font-cocogoose/cocogoose_pro_thin-trial-webfont.woff2') format('woff2'),
+    url('../../font-cocogoose/cocogoose_pro_thin-trial-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'cocogoose_proultraLtIt';
+  src:
+    url('../../font-cocogoose/cocogoose_pro_thin_italic-trial-webfont.woff2') format('woff2'),
+    url('../../font-cocogoose/cocogoose_pro_thin_italic-trial-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'cocogoose_ultralight';
+  src:
+    url('../../font-cocogoose/cocogoose_pro_ultralight-trial-webfont.woff2') format('woff2'),
+    url('../../font-cocogoose/cocogoose_pro_ultralight-trial-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'cocogooseregular';
+  src:
+    url('../../font-cocogoose/cocogoose_pro_ultralight_italic-trial-webfont.woff2') format('woff2'),
+    url('../../font-cocogoose/cocogoose_pro_ultralight_italic-trial-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-size: 1.6rem;
+  font-family: 'Lato', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+// Colors
+:root {
+  --brown-bg: #595959;
+  --orange-title: #ec5242;
+  --obscure: #272a31;
+  --lighty: #d3d3d3;
+}
+
+// Apply to body
+.disable-scroll {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.anchor {
+  a {
+    img {
+      width: 150px;
+      height: auto;
+    }
+  }
+}
+
+.intro-section {
+  a {
+    font-family: 'cocogoosedemibold', sans-serif;
+    text-decoration: underline;
+
+    span {
+      font-family: 'Lato', sans-serif;
+      font-weight: 900;
+    }
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 5rem;
+  gap: 2rem;
+
+  .info {
+    .copyright {
+      font-weight: 700;
+      color: var(--orange-title);
+    }
+
+    p {
+      color: var(--brown-bg);
+    }
+  }
+}
+
+header {
+  .mobile-menu-on {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(211, 211, 211, 0.9), rgba(211, 211, 211, 0.9)), url(../../images/concert-people.jpeg);
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, cover;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+
+    i {
+      align-self: flex-end;
+      font-size: 4rem;
+      color: var(--orange-title);
+      margin: 2rem 2rem 0 0;
+    }
+
+    ul {
+      list-style-type: none;
+      font-size: 3rem;
+      font-weight: 800;
+      align-self: center;
+      margin: 0;
+      padding: 0;
+
+      li {
+        text-align: center;
+        margin-bottom: 2rem;
+        padding: 3rem;
+        border-bottom: 0.2rem var(--orange-title) solid;
+
+        a {
+          text-decoration: none;
+          color: var(--orange-title);
+        }
+      }
+
+      .square {
+        border: 0.3rem solid var(--orange-title);
+        padding: 2rem 5rem;
+      }
+    }
+  }
+
+  .mobile-nav {
+    background-color: rgba(255, 255, 255, 0.8);
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
+    font-size: 4rem;
+
+    .tools-nav {
+      display: none;
+    }
+
+    .nav-desktop {
+      padding: 2rem 3rem;
+
+      .logo,
+      ul {
+        display: none;
+      }
+    }
+  }
+
+  .mobile-menu-off {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    .mobile-nav {
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+
+        li {
+          margin-left: 3rem;
+          display: flex;
+          align-items: center;
+
+          a {
+            font-weight: 400;
+            font-size: 1.8rem;
+            color: var(--obscure);
+          }
+        }
+      }
+
+      li:hover {
+        a {
+          color: var(--orange-title);
+        }
+      }
+
+      .tools-nav {
+        background-color: var(--obscure);
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+
+        ul {
+          display: flex;
+          list-style-type: none;
+          margin: 0 6rem 0 0;
+          padding: 1rem 0;
+
+          li {
+            margin-left: 2rem;
+            display: flex;
+            transition: 0.5s;
+
+            a {
+              font-weight: 400;
+              font-size: 1.5rem;
+              color: white;
+            }
+          }
+
+          li:hover {
+            transform: scale(1.2);
+          }
+        }
+      }
+
+      .nav-desktop {
+        #menu-open-btn {
+          display: none;
+        }
+
+        #about-open-btn {
+          display: none;
+        }
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 6rem;
+
+        ul {
+          display: flex;
+        }
+
+        .logo {
+          display: block;
+          color: var(--orange-title);
+          font-size: 2.5rem;
+          font-weight: 900;
+          line-height: 2.5rem;
+        }
+
+        .square {
+          border: 0.3rem solid var(--orange-title);
+          padding: 1rem 2rem;
+          margin-left: 5rem;
+        }
+
+        .square:hover {
+          background-color: var(--orange-title);
+          cursor: pointer;
+
+          a {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+main {
+  .intro-section {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    background-image: linear-gradient(rgba(211, 211, 211, 0.9), rgba(211, 211, 211, 0.9)), url(../../images/concert-people.jpeg);
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, cover;
+
+    h1 {
+      font-family: 'cocogoosedemibold', sans-serif;
+      font-size: 6rem;
+      font-weight: 900;
+      color: var(--orange-title);
+      line-height: 6rem;
+      order: 1;
+      margin-bottom: 2rem;
+      margin-left: 2rem;
+
+      span {
+        font-family: 'Lato', sans-serif;
+      }
+    }
+
+    h2 {
+      order: 0;
+      font-size: 4rem;
+      font-weight: 300;
+      color: var(--orange-title);
+      margin-left: 2rem;
+    }
+
+    .text-container {
+      order: 2;
+      background-color: white;
+      padding: 1.8rem;
+      color: var(--brown-bg);
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+
+    h3 {
+      order: 3;
+      font-family: 'cocogoosedemibold', sans-serif;
+      font-size: 4rem;
+      color: var(--brown-bg);
+      margin-left: 2rem;
+
+      span {
+        font-family: 'Lato', sans-serif;
+      }
+    }
+
+    h4 {
+      order: 4;
+      font-size: 3rem;
+      font-weight: 400;
+      color: var(--brown-bg);
+      margin-left: 2rem;
+    }
+
+    .path {
+      display: none;
+    }
+
+    @media screen and (min-width: 998px) {
+      padding: 0 25rem;
+
+      .text-container {
+        font-size: 2rem;
+      }
+
+      h3 {
+        font-size: 4rem;
+      }
+
+      h4 {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .intro-about {
+    h1,
+    h2,
+    h4,
+    .text-container {
+      text-align: center;
+    }
+
+    h4 {
+      margin: 0;
+      font-size: 2rem;
+      padding-bottom: 2rem;
+    }
+
+    .about-mail {
+      order: 5;
+      text-align: center;
+      color: var(--brown-bg);
+      font-size: 2rem;
+    }
+
+    @media screen and (min-width: 998px) {
+      .path {
+        display: block;
+        position: absolute;
+        top: 12rem;
+        right: 10rem;
+
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          display: flex;
+
+          li {
+            margin-left: 1rem;
+
+            a {
+              text-decoration: none;
+              color: var(--obscure);
+            }
+
+            .greater {
+              color: var(--orange-title);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .band-container {
+    img {
+      width: 250px;
+      height: auto;
+    }
+  }
+
+  .card-container {
+    p {
+      font-size: 2rem;
+      font-weight: 300;
+    }
+  }
+
+  .logo-container {
+    img {
+      transition: 0.5s;
+    }
+
+    img:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  // Past Section
+  .past-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6rem 4rem;
+
+    h2 {
+      font-weight: 400;
+      font-size: 5rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .horizontal-bar {
+      width: 5rem;
+      height: 0.2rem;
+      background-color: var(--orange-title);
+      margin-bottom: 4rem;
+    }
+
+    h3 {
+      font-weight: 400;
+      font-size: 2.5rem;
+      padding: 0 8rem;
+      color: var(--brown-bg);
+      text-align: center;
+      margin-bottom: 10rem;
+    }
+
+    .events-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+
+      img {
+        transition: 0.5s;
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      .events-container {
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: baseline;
+
+        img:hover {
+          transform: scale(1.1);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  // Logo Section
+  .logo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    padding: 4rem 4rem;
+    border-bottom: 0.1rem solid var(--brown-bg);
+
+    h2 {
+      font-weight: 400;
+      font-size: 5rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .horizontal-bar {
+      width: 5rem;
+      height: 0.2rem;
+      background-color: var(--orange-title);
+      margin-bottom: 4rem;
+    }
+
+    h3 {
+      font-weight: 400;
+      font-size: 2.5rem;
+      padding: 0 8rem;
+      color: var(--brown-bg);
+      text-align: center;
+      margin-bottom: 10rem;
+    }
+
+    .logo-container {
+      border: 0.1rem solid var(--brown-bg);
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 10rem 0;
+    }
+  }
+
+  // Spaces Section
+  .spaces-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6rem 2rem;
+    background: radial-gradient(circle, transparent 20%, #000 20%, #000 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #000 20%, #000 80%, transparent 80%, transparent) 10px 10px, linear-gradient(#262968 0.8px, transparent 0.8px) 0 -0.4px, linear-gradient(90deg, #262968 0.8px, #000 0.8px) -0.4px 0;
+    background-size: 20px 20px, 20px 20px, 10px 10px, 10px 10px;
+
+    h2 {
+      color: white;
+      font-weight: 400;
+      font-size: 5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .horizontal-bar {
+      width: 5rem;
+      height: 0.2rem;
+      background-color: var(--orange-title);
+      margin-bottom: 4rem;
+    }
+
+    .spaces-mobile-btn {
+      font-size: 3rem;
+      text-decoration: none;
+      color: white;
+      background-color: var(--orange-title);
+      padding: 3rem;
+      margin-top: 3rem;
+    }
+
+    .spaces-mobile-btn:link {
+      text-decoration: none;
+    }
+
+    .spaces-mobile-btn:hover {
+      text-decoration: underline;
+    }
+
+    .spaces-desktop-btn {
+      display: none;
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: 0.3fr 0.6fr 0.8fr;
+      color: white;
+      align-items: center;
+      justify-items: center;
+      background-color: rgba(77, 77, 77, 0.5);
+      padding: 1rem 1rem;
+      margin-bottom: 1rem;
+
+      i {
+        font-size: 9rem;
+      }
+
+      h3 {
+        color: var(--orange-title);
+        font-size: 3rem;
+        justify-self: start;
+        margin-left: 0.5rem;
+      }
+    }
+
+    @media screen and (min-width: 998px) {
+      .desktop-container {
+        display: flex;
+
+        .card-container {
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: 0.2fr 0.6fr 0.8fr;
+          margin-right: 0.5rem;
+          justify-items: center;
+
+          i {
+            font-size: 7rem;
+          }
+
+          h3 {
+            font-size: 2.5rem;
+            justify-self: center;
+          }
+
+          p {
+            text-align: center;
+          }
+        }
+      }
+
+      .spaces-mobile-btn {
+        display: none;
+      }
+
+      .spaces-desktop-btn {
+        display: block;
+        color: white;
+        margin: 6rem 0;
+        padding: 1rem;
+        font-weight: 300;
+        font-size: 2rem;
+      }
+
+      .spaces-desktop-btn:link {
+        text-decoration: none;
+      }
+
+      .spaces-desktop-btn:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  // Sponsors section
+  .sponsors-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(59, 59, 59);
+    padding: 5rem 0;
+
+    h2 {
+      font-weight: 400;
+      font-size: 5rem;
+      margin-bottom: 1.5rem;
+      color: grey;
+    }
+
+    .horizontal-bar {
+      width: 5rem;
+      height: 0.2rem;
+      background-color: var(--orange-title);
+      margin-bottom: 4rem;
+    }
+
+    .sponsors-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      filter: grayscale(100%);
+
+      img {
+        width: 25%;
+        height: auto;
+        margin: 1.5rem;
+        transition: 0.5s;
+      }
+
+      img:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+      }
+    }
+  }
+
+  // Presented Section
+  .presented-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 0;
+
+    h2 {
+      font-size: 5rem;
+      font-weight: 400;
+      margin-top: 4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .horizontal-bar {
+      width: 5rem;
+      height: 0.2rem;
+      background-color: var(--orange-title);
+      margin-bottom: 4rem;
+    }
+
+    .cards-container {
+      justify-content: center;
+    }
+
+    .band-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 3rem;
+      padding: 0 2rem;
+
+      .grid-2 {
+        padding-left: 2rem;
+        display: flex;
+        flex-direction: column;
+
+        h3 {
+          font-weight: 600;
+          font-size: 2rem;
+        }
+
+        h4 {
+          font-weight: 400;
+          color: var(--orange-title);
+          font-style: italic;
+          line-height: 1.5rem;
+          font-size: 1.5rem;
+          margin-bottom: 1rem;
+        }
+
+        .card-bar {
+          width: 3rem;
+          height: 0.2rem;
+          background-color: grey;
+          margin-bottom: 1rem;
+        }
+
+        p {
+          font-weight: 300;
+          font-size: 1.4rem;
+          line-height: 1.4rem;
+          color: var(--brown-bg);
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 998px) {
+    .cards-container {
+      display: flex;
+      flex-wrap: wrap;
+
+      .band-container {
+        width: 45%;
+
+        .grid-2 {
+          flex-basis: 50%;
+
+          h3 {
+            font-size: 2rem;
+          }
+
+          h4 {
+            font-size: 1.5rem;
+            line-height: 1.5rem;
+          }
+
+          p {
+            font-size: 1.4rem;
+            line-height: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}
