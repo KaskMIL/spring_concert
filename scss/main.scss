@@ -1,5 +1,94 @@
+@font-face {
+  font-family: 'cocogoose_proitalic';
+  src: url('../../font-cocogoose/cocogoose_pro-trial-webfont.woff2') format('woff2'),
+       url('../../font-cocogoose/cocogoose_pro-trial-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'cocogoose_prolight_italic';
+  src: url('../../font-cocogoose/cocogoose_pro_italic-trial-webfont.woff2') format('woff2'),
+       url('../../font-cocogoose/cocogoose_pro_italic-trial-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'cocogooselight';
+  src: url('../../font-cocogoose/cocogoose_pro_light-trial-webfont.woff2') format('woff2'),
+       url('../../font-cocogoose/cocogoose_pro_light-trial-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'cocogoose_prosemilight_italic';
+  src: url('../../font-cocogoose/cocogoose_pro_light_italic-trial-webfont.woff2') format('woff2'),
+       url('../../font-cocogoose/cocogoose_pro_light_italic-trial-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'cocogoosedemibold';
+  src: url('../../font-cocogoose/cocogoose_pro_semilight-trial-webfont.woff2') format('woff2'),
+       url('../../font-cocogoose/cocogoose_pro_semilight-trial-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'cocogoose_prothin_italic';
+  src: url('../../font-cocogoose/cocogoose_pro_semilight_italic-trial-webfont.woff2') format('woff2'),
+       url('../../font-cocogoose/cocogoose_pro_semilight_italic-trial-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'cocogoose_prothin';
+  src: url('../../font-cocogoose/cocogoose_pro_thin-trial-webfont.woff2') format('woff2'),
+       url('../../font-cocogoose/cocogoose_pro_thin-trial-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'cocogoose_proultraLtIt';
+  src: url('../../font-cocogoose/cocogoose_pro_thin_italic-trial-webfont.woff2') format('woff2'),
+       url('../../font-cocogoose/cocogoose_pro_thin_italic-trial-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'cocogoose_ultralight';
+  src: url('../../font-cocogoose/cocogoose_pro_ultralight-trial-webfont.woff2') format('woff2'),
+       url('../../font-cocogoose/cocogoose_pro_ultralight-trial-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'cocogooseregular';
+  src: url('../../font-cocogoose/cocogoose_pro_ultralight_italic-trial-webfont.woff2') format('woff2'),
+       url('../../font-cocogoose/cocogoose_pro_ultralight_italic-trial-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Pacifico&family=Permanent+Marker&family=Satisfy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 html {
@@ -259,6 +348,7 @@ main {
     background-size: cover, cover;
 
     h1 {
+      font-family: 'cocogoosedemibold', sans-serif;
       font-size: 6rem;
       font-weight: 900;
       color: var(--orange-title);
@@ -266,6 +356,10 @@ main {
       order: 1;
       margin-bottom: 2rem;
       margin-left: 2rem;
+
+      span {
+        font-family: 'Lato', sans-serif;
+      }
     }
 
     h2 {
@@ -289,10 +383,14 @@ main {
 
     h3 {
       order: 3;
-      font-size: 5rem;
-      font-weight: 800;
+      font-family: 'cocogoosedemibold';
+      font-size: 4rem;
       color: var(--brown-bg);
       margin-left: 2rem;
+
+      span {
+        font-family: 'Lato', sans-serif;
+      }
     }
 
     h4 {
@@ -301,6 +399,16 @@ main {
       font-weight: 400;
       color: var(--brown-bg);
       margin-left: 2rem;
+    }
+
+    a {
+      font-family: 'cocogoosedemibold';
+      text-decoration: underline;
+
+      span {
+        font-family: 'Lato', sans-serif;
+        font-weight: 900;
+      }
     }
 
     .path {
@@ -383,17 +491,12 @@ main {
   }
 
   .logo-container {
-    h4 {
-      color: var(--orange-title);
-      font-size: 6rem;
-      font-weight: 900;
-      line-height: 5rem;
+    img {
       transition: 0.5s;
     }
 
-    h4:hover {
+    img:hover {
       transform: scale(1.1);
-      cursor: pointer;
     }
   }
 
@@ -402,7 +505,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 4rem 4rem;
+    padding: 6rem 4rem;
 
     h2 {
       font-weight: 400;
@@ -432,58 +535,10 @@ main {
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      gap: 2rem;
 
-      .first-container {
-        width: 350px;
-        height: 350px;
-        background-image: linear-gradient(rgba(255, 0, 0, 0.5), rgba(255, 0, 0, 0.5)), url(../../images/public-sing.jpeg);
-        background-repeat: no-repeat no-repeat;
-        background-size: cover;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        margin-bottom: 3rem;
-        text-align: center;
+      img {
         transition: 0.5s;
-
-        h4 {
-          font-size: 5rem;
-          margin-bottom: 1rem;
-          font-weight: 700;
-        }
-
-        p {
-          font-size: 2.5rem;
-          font-weight: 300;
-        }
-      }
-
-      .second-container {
-        width: 350px;
-        height: 350px;
-        background-image: linear-gradient(rgba(255, 0, 0, 0.5), rgba(255, 0, 0, 0.5)), url(../../images/concert-people.jpeg);
-        background-repeat: no-repeat no-repeat;
-        background-size: cover;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        text-align: center;
-        transition: 0.5s;
-
-        h4 {
-          font-size: 5rem;
-          margin-bottom: 1rem;
-          font-weight: 700;
-        }
-
-        p {
-          font-size: 2.5rem;
-          font-weight: 300;
-        }
       }
     }
 
@@ -492,14 +547,8 @@ main {
         flex-direction: row;
         align-items: baseline;
         justify-content: baseline;
-        gap: 2rem;
 
-        .first-container:hover {
-          transform: scale(1.1);
-          cursor: pointer;
-        }
-
-        .second-container:hover {
+        img:hover {
           transform: scale(1.1);
           cursor: pointer;
         }
