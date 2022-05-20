@@ -50,58 +50,25 @@ a {
 
 footer {
   display: flex;
-  padding: 2rem 2rem;
   justify-content: center;
-  gap: 1rem;
+  padding: 2rem 5rem;
+  gap: 2rem;
 
-  .logo {
-    display: flex;
-    justify-content: flex-end;
-
-    a {
-      text-decoration: none;
-      color: var(--orange-title);
-      font-weight: 900;
-      font-size: 2rem;
+  a {
+    img {
+      width: 150px;
+      height: auto;
     }
   }
 
   .info {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 50%;
+    .copyright {
+      font-weight: 700;
+      color: var(--orange-title);
+    }
 
     p {
-      color: grey;
-      font-size: 1.4rem;
-      line-height: 1.4rem;
-    }
-
-    .copyright {
-      color: var(--orange-title);
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-    }
-  }
-
-  @media screen and (min-width: 824px) {
-    .logo {
-      flex-basis: 50%;
-
-      a {
-        font-size: 3rem;
-      }
-    }
-
-    .info {
-      p {
-        font-size: 1.8rem;
-        line-height: 1.8rem;
-      }
-
-      .copyright {
-        font-size: 2rem;
-      }
+      color: var(--brown-bg);
     }
   }
 }
