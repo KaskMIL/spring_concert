@@ -116,6 +116,21 @@ a {
   color: black;
 }
 
+.anchor a img {
+  width: 150px;
+  height: auto;
+}
+
+.intro-section a {
+  font-family: 'cocogoosedemibold', sans-serif;
+  text-decoration: underline;
+}
+
+.intro-section a span {
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+}
+
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -125,11 +140,6 @@ footer {
           justify-content: center;
   padding: 2rem 5rem;
   gap: 2rem;
-}
-
-footer a img {
-  width: 150px;
-  height: auto;
 }
 
 footer .info .copyright {
@@ -391,7 +401,7 @@ main .intro-section h3 {
   -webkit-box-ordinal-group: 4;
       -ms-flex-order: 3;
           order: 3;
-  font-family: 'cocogoosedemibold';
+  font-family: 'cocogoosedemibold', sans-serif;
   font-size: 4rem;
   color: var(--brown-bg);
   margin-left: 2rem;
@@ -409,16 +419,6 @@ main .intro-section h4 {
   font-weight: 400;
   color: var(--brown-bg);
   margin-left: 2rem;
-}
-
-main .intro-section a {
-  font-family: 'cocogoosedemibold';
-  text-decoration: underline;
-}
-
-main .intro-section a span {
-  font-family: 'Lato', sans-serif;
-  font-weight: 900;
 }
 
 main .intro-section .path {
@@ -487,6 +487,11 @@ main .intro-about .about-mail {
   main .intro-about .path ul li .greater {
     color: var(--orange-title);
   }
+}
+
+main .band-container img {
+  width: 250px;
+  height: auto;
 }
 
 main .card-container p {
@@ -828,6 +833,9 @@ main .presented-section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 3rem 0;
 }
 
@@ -845,6 +853,12 @@ main .presented-section .horizontal-bar {
   margin-bottom: 4rem;
 }
 
+main .presented-section .cards-container {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 main .presented-section .band-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -854,11 +868,6 @@ main .presented-section .band-container {
           align-items: center;
   margin-bottom: 3rem;
   padding: 0 2rem;
-}
-
-main .presented-section .band-container img {
-  width: 250px;
-  height: auto;
 }
 
 main .presented-section .band-container .grid-2 {

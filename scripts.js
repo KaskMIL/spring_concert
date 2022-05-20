@@ -8,6 +8,7 @@ const bandsBtn = document.getElementById('bands-btn');
 const sponsorBtn = document.getElementById('sponsor-btn');
 const newsBtn = document.getElementById('news-btn');
 const campBtn = document.getElementById('camp-btn');
+const cardsContainer = document.getElementById('bands-cards-container');
 const $body = document.body;
 
 // Funtions
@@ -18,6 +19,26 @@ function closeMenu() {
   $body.classList.remove('disable-scroll');
 }
 
+function loadCards(array, element) {
+  for (let i = 0; i < array.length; i += 1) {
+    const article = document.createElement('article');
+    article.classList.add('band-container');
+
+    article.innerHTML = `
+      <img src="${array[i].image}" alt="${array[i].title}">
+      <div class="grid-2">
+      <h3>${array[i].title}</h3>
+      <h4>${array[i].subtitle}${array[i].subtitleTwo}"</h4>
+      <p>${array[i].paragraphOne}${array[i].paragraphTwo}
+      ${array[i].paragraphThree}${array[i].paragraphFour}
+      ${array[i].paragraphFive} </p>
+     </div>`;
+
+    element.appendChild(article);
+  }
+}
+
+// DOM Manipulation
 openMenuBtn.addEventListener('click', () => {
   menuNavHamburger.classList.add('mobile-menu-off');
   menuNavOpen.classList.remove('mobile-menu-off');
@@ -121,21 +142,4 @@ const dataBands = [{
   paragraphFive: 'rock.',
 }];
 
-const cardsContainer = document.getElementById('bands-cards-container');
-
-for (let i = 0; i < dataBands.length; i += 1) {
-  const article = document.createElement('article');
-  article.classList.add('band-container');
-
-  article.innerHTML = `
-    <img src="${dataBands[i].image}" alt="${dataBands[i].title}">
-    <div class="grid-2">
-    <h3>${dataBands[i].title}</h3>
-    <h4>${dataBands[i].subtitle}${dataBands[i].subtitleTwo}"</h4>
-    <p>${dataBands[i].paragraphOne}${dataBands[i].paragraphTwo}
-    ${dataBands[i].paragraphThree}${dataBands[i].paragraphFour}
-    ${dataBands[i].paragraphFive} </p>
-   </div>`;
-
-  cardsContainer.appendChild(article);
-}
+window.addEventListener('load', loadCards(dataBands, cardsContainer));
