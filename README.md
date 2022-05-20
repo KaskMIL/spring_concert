@@ -20,8 +20,8 @@
 
 ## Live Demo
 
-[Video Explanation](https://www.loom.com/share/52722df18bb14eaa880d0e6513e4d4a6)
-[Live Demo](https://kaskmil.github.io/spring_concert/)
+- [Video Explanation](https://www.loom.com/share/52722df18bb14eaa880d0e6513e4d4a6)
+- [Live Demo](https://kaskmil.github.io/spring_concert/)
 
 
 ## Getting Started
